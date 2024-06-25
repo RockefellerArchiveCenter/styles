@@ -4,6 +4,8 @@
 
 /**
 * Defines layout styles for base table.
+* 1. Override default browser styling
+* 2. Removes margins for elements links in tables
 **/
 .table {
   border-collapse: collapse;
@@ -17,7 +19,7 @@
 }
 
 .table tbody th {
-  font-weight: $font-weight-normal; // override default browser styling
+  font-weight: $font-weight-normal; /* 1 */
   padding: 20px;
   text-align: left;
 }
@@ -28,6 +30,10 @@
 
 .table td input {
   width: auto;
+}
+
+.table * {
+  margin: 0; /* 2 */
 }
 
 /**
