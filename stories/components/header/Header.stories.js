@@ -11,13 +11,6 @@ export default {
   }
 };
 
-export const colors = () => {
-  const headers = headerColors.map(c => Header({
-    class: c,
-  })).join('')
-  return headers
-}
-
 export const withTextBrand = () => {
   const headers = headerColors.map(c => Header({
     class: c,
