@@ -1,6 +1,5 @@
 import Header from './header.handlebars'
 import headerColors from './colors.json'
-import Logo from '../../../stylesheets/assets/img/hero_logo.png'
 
 export default {
   component: Header,
@@ -25,15 +24,6 @@ export const withTextBrand = () => {
     withTextBrand: true,
     brandTitle: 'library.rockarch.org',
     brandSubtitle: 'The Online Bibliographic Catalog of Rockefeller Archive Center'
-  })).join('')
-  return headers
-}
-
-export const withImageBrand = () => {
-  const headers = headerColors.map(c => Header({
-    class: c,
-    withImageBrand: true,
-    logoUrl: Logo
   })).join('')
   return headers
 }

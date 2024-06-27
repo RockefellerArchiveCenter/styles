@@ -26,8 +26,7 @@ Media Icons component is an optional component.
 ## Known issues
 
 In the header with dropdown items, when the dropdown is open the dropdown buttons in the header move.
-It is unclear if this is something that can be fixed in the styles, or is related to Storybook's
-rendering.
+This appears to be related to Storybook's rendering, but works as expected when implemented.
 
 ## Colors
 
@@ -38,13 +37,9 @@ classes.
 
 ## Branding
 
-The header can have either a simple text brand:
+The header can include a simple text brand/site description:
 
 <Story of={stories.withTextBrand} />
-
-Or it can use an image in lieu of text. Make sure the image has appropriate `alt` text:
-
-<Story of={stories.withImageBrand} />
 
 ## Navigation
 
