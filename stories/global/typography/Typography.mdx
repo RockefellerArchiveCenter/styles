@@ -44,11 +44,11 @@ meaningful structure for page content, not just for visual style.
 
 ### Best practices
 
-Use only one `h1` element per page, place heading in sequential order, and do not skip heading levels.
+Use only one `h1` element per page, place headings in sequential order, and do not skip heading levels.
 
 ### Known issues
 
-There are currently only partially defined styles for `h5` and `h6`.
+The color contrast for the h4 font color (sandy-orange, #f39653) is insufficient with most background colors.
 
 ### Implementation
 
@@ -84,20 +84,18 @@ In the case where the default text color results in accessibility issues because
 contrast with the background color or aesthetically don't look good, use text color classes
 to change the element color.
 
-Use `font--bold` to change any text weight to 600 bold.
-
 ### Best practices
 Components like buttons, a header, or a table of contents already have various color options 
 with different text colors, so use the specific component color classes when appropriate.
 
 ### Known issues
 
-Color `$flame-orange (#d7521d)` does not meet WCAG requirements for color 
+Color `$flame-orange (#d7521d)` does not meet WCAG requirements for color
 contrast against most background colors.
 
 ### Implementation
 
-- For bold text use `text--bold`
+- For bold text with a font-weight of 600, use `text--bold`
 - For white text use `text--white`
 - For blue text use `text--blue`
 - For orange text use `text--orange`
