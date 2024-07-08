@@ -5,7 +5,6 @@
 /**
 * Styles for table of contents navigation
 * 1. Keeps table of contents visible on the page while scrolling
-* 2. When site enables functionality to track visible sections of page, shows focus on toc link
 **/
 
 .toc--sticky {
@@ -16,16 +15,8 @@
 .toc {
   margin-bottom: 60px;
   min-height: 310px;
-  padding: 36px 20px;
+  padding: 36px 0;
   width: 100%;
-
-  @include lg-up {
-    padding: 36px 25px;
-  }
-
-  .active {
-    @include focus-default; /* 2 */
-  }
 }
 
 /**
@@ -55,29 +46,25 @@
 .toc__link-item {
   display: block;
   font-family: $sans-serif-stack;
-  margin: 0 0 20px;
+  line-height: 1.3;
+  margin: 0;
+  padding: 10px 25px;
   text-align: left;
   text-decoration: none;
   width: 100%;
 }
 
 /**
-* Styles for table of contents title. Font size and weight are the same as an h2 element
-* 1. Creates more vertical space between items on large screens
+* Styles for table of contents title.
 **/
 .toc__title {
-  font-size: 21px;
+  font-size: 18px;
   font-weight: $font-weight-bold;
 }
 
 .toc__link-item {
   font-size: 14px;
   font-weight: $font-weight-heavy;
-  line-height: 17px;
-
-  @include lg-up {
-    line-height: 18px; /* 1 */
-  }
 }
 
 .toc__link-item :hover,
@@ -86,40 +73,56 @@
 }
 
 /**
-* Styles to create three table of contents color options
-* 1. Changes outline color to be visible on the orange background
+* Styles to create three table of contents color options, including styles for active links.
+* 1. Add additional padding to link items when the TOC has a title.
 **/
 .toc--neutral {
   background-color: $desert-grey;
+}
 
-  .toc__link-item,
-  .toc__title {
-    color: $night-grey;
-  }
+.toc--neutral .toc__link-item,
+.toc--neutral .toc__title {
+  color: $night-grey;
+}
+
+.toc--neutral .active {
+  background-color: $rust-red;
+  color: $desert-grey;
 }
 
 .toc--blue {
   background-color: $solitude-blue;
+}
 
-  .toc__link-item,
-  .toc__title {
-    color: $regal-blue;
-  }
+.toc--blue .toc__link-item,
+.toc--blue .toc__title {
+  color: $regal-blue;
+}
+
+.toc--blue .active {
+  background-color: $midnight-blue;
+  color: $solitude-blue;
 }
 
 .toc--orange {
   background-color: $flame-orange;
-
-  .active {
-    outline-color: $white; /* 1 */
-  }
 }
 
 .toc--orange .toc__link-item,
 .toc--orange .toc__title {
   color: $white;
+}
 
-  &:focus {
-    outline-color: $white; /* 1 */
-  }
+.toc__title + div .toc__link-item {
+  padding-left: 40px; /* 1 */
+}
+
+.toc--orange .toc__link-item:focus,
+.toc--orange .toc__title:focus {
+  outline: none;
+  text-decoration: underline;
+}
+
+.toc--orange .active {
+  border: $white 2px solid;
 }
