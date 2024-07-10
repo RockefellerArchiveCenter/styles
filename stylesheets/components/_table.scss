@@ -4,6 +4,10 @@
 
 /**
 * Defines layout styles for base table.
+* 1. Override default browser styling
+* 2. Removes margins for elements in tables
+# 3. Line height and font size for links, lists, and paragraphs should match
+* existing text styles.
 **/
 .table {
   border-collapse: collapse;
@@ -17,7 +21,7 @@
 }
 
 .table tbody th {
-  font-weight: $font-weight-normal; // override default browser styling
+  font-weight: $font-weight-normal; /* 1 */
   padding: 20px;
   text-align: left;
 }
@@ -30,6 +34,23 @@
   width: auto;
 }
 
+.table * {
+  margin: 0; /* 2 */
+}
+
+.table a,
+.table p,
+.table ul,
+.table ol { /* 3 */
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.table ul,
+.table ol {
+  padding-left: 15px;
+}
+
 /**
 * Defines layout styles for striped table.
 **/
@@ -39,4 +60,11 @@
 
 .table.table-striped tbody tr:nth-child(even) {
   background-color: $white;
+}
+
+/**
+* Make a table scroll horizontally when it's too wide for the screen
+**/
+.table-responsive {
+  overflow-x: auto;
 }

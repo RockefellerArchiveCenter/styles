@@ -15,7 +15,12 @@ they are disruptive and should be used sparingly.
 
 ## Best practices
 
-- Use the `role='alert'` attribute to support screen readers.
+- Use the `role='alert'` or `role='status'` attribute to announce alerts with screen readers. Use
+'alert' for urgent messages that will interrupt screen readers, and 'status' for messages
+that can wait for the screen reader to finish its current task before being announced. To implement
+dynamically without a page reload, there must be an existing hidden live region with the aria role
+in the HTML in which the alert contents is inserted. The screen reader will announce dynamic changes
+to the content in this region.
 - Alerts should not block a user from performing any other task on the screen.
 - Alerts should not disappear automatically. If you want users to be able to remove
   alerts, use the `alert--dismissable` class.

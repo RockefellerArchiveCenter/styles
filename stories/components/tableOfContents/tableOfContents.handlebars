@@ -4,13 +4,13 @@
     <a href="#documentation" class="toc__skip-link toc__skip-link--orange">Skip navigation</a>
   {{/if}}
   <a class="toc__title" href="/digital-preservation-policy/">{{title}}</a>
-  <div id="toc__link-group">
+  <div id="toc-link-group">
 {{else}}
 <nav class="toc--sticky" aria-label="{{ariaLabel}}">
   {{#if skipNavigation}}
     <a href="#documentation" class="toc__skip-link toc__skip-link--orange">Skip navigation</a>
   {{/if}}
-  <div class="toc {{class}}" id="toc__link-group">
+  <div class="toc {{class}}" id="toc-link-group">
 {{/if}}
     {{#each listItems}}
     <a class="toc__link-item {{#if this.active}}active{{/if}}" href="#{{this.text}}">{{this.text}}</a>

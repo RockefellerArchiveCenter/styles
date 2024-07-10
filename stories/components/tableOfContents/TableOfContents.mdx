@@ -15,7 +15,7 @@ without having to scroll.
 
 ## Best practices
 
-- Use the `#toc__link-group` div id selector for building the table of contents from
+- Use the `#toc-link-group` div id selector for building the table of contents from
 page headings in a script.
 
 - Optionally use `class="active"` to indicate when a specific section of contents is
@@ -53,8 +53,8 @@ The table of contents can also have one or more titles to separate sections:
 For long tables of contents that are repeated on multiple pages, or located inside of 
 the `main` element, add a "skip navigation" link to improve keyboard navigation 
 accessibility. The `href` attribute of this link should point to the id of the element
-containing the page's main content. Use a color-specific class which contrasts with
-the table of contents background color:
+containing the page's main content (shown in this example as `#documentation`). 
+Use a color-specific class which contrasts with the table of contents background color:
 - `toc__skip-link--orange`
 - `toc__skip-link--blue`
 - `toc__skip-link--neutral`

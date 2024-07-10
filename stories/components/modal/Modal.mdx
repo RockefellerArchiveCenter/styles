@@ -25,6 +25,11 @@ confirmed and explain any potential consequences that it may cause. Both the
 title and the button should reflect the action that will occur. If the action is
 destructive or irreversible then use a transactional danger modal.
 
+### Enable an action sequence
+Use modals in design patterns that initiate an action sequence without requiring
+the page to reload. For example, a user might submit information as part of a form
+in a modal.
+
 ## Best practices
 
 - After the modal opens, initial focus should be set on the first focusable
@@ -42,5 +47,11 @@ No related components.
 ## Known issues
 
 No known issues.
+
+## Implementation
+The default `.modal` class styles place the modal in the center of the screen using 
+`position: absolute` and `bottom`, `top`, `left` and `right` properties set to a content
+margin of `10%`. You can adjust modal size in local styles by adjusting those property 
+percentage values.
 
 <Story of={stories.basic} height='500px'/>
