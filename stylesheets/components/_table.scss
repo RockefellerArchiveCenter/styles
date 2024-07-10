@@ -40,9 +40,15 @@
 
 .table a,
 .table p,
-.table li { /* 3 */
+.table ul,
+.table ol { /* 3 */
   font-size: inherit;
   line-height: inherit;
+}
+
+.table ul,
+.table ol {
+  padding-left: 15px;
 }
 
 /**
