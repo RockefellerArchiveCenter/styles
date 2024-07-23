@@ -15,8 +15,8 @@ export const withTextBrand = () => {
   const headers = headerColors.map(c => Header({
     class: c,
     withTextBrand: true,
-    brandTitle: 'library.rockarch.org',
-    brandSubtitle: 'The Online Bibliographic Catalog of Rockefeller Archive Center'
+    brandTitle: 'blog.rockarch.org',
+    brandSubtitle: 'Rockefeller Archive Center Blog'
   })).join('')
   return headers
 }
