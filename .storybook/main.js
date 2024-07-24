@@ -18,7 +18,7 @@ const config = {
         }
       }
     }
-  }],
+  }, '@storybook/addon-webpack5-compiler-swc', '@chromatic-com/storybook'],
 
   webpackFinal: async (config, { configType }) => {
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
@@ -36,10 +36,6 @@ const config = {
   framework: {
     name: '@storybook/html-webpack5',
     options: {}
-  },
-
-  docs: {
-    autodocs: false
   }
 };
 export default config;
