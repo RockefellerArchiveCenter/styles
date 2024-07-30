@@ -5,8 +5,8 @@ export default {
   title: "Components/Minimap"
 };
 
-export const basic = () => Minimap()
+export const fiveAcross = () => Minimap({ class: 'minimap--5-across' })
 
-export const tenAcross = () => Minimap({ countAcross: 10 })
+export const tenAcross = () => Minimap({ class: 'minimap--10-across' })
 
-export const twentyAcross = () => Minimap({ countAcross: 20 })
+export const twentyAcross = () => Minimap({ class: 'minimap--20-across' })
