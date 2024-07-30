@@ -1,3 +1,5 @@
+@use '../abstracts' as abs;
+
 // -----------------------------------------------------------------------------
 // This file contains styles related to the header of the site/application.
 // For related components, see styles in the dropdown, nav, and social-icons components.
@@ -8,7 +10,7 @@
 * 1. Removes default link underline
 **/
 @mixin header-text {
-  font-family: $sans-serif-stack;
+  font-family: abs.$sans-serif-stack;
   font-size: 12px;
   text-decoration: none; /* 1 */
 }
@@ -20,12 +22,12 @@
 @mixin header-title {
   @include header-text;
 
-  font-weight: $font-weight-heavy;
+  font-weight: abs.$font-weight-heavy;
   letter-spacing: 0.1em;
   line-height: 13px;
   text-transform: uppercase;
 
-  @include md-up {
+  @include abs.md-up {
     font-size: 15px;
     line-height: 18px;
   }
@@ -64,20 +66,20 @@
 * Styles for header colors.
 **/
 .header--white {
-  background-color: $white;
-  color: $regal-blue;
+  background-color: abs.$white;
+  color: abs.$regal-blue;
 
   a {
-    color: $regal-blue;
+    color: abs.$regal-blue;
   }
 }
 
 .header--blue {
-  background-color: $regal-blue;
-  color: $white;
+  background-color: abs.$regal-blue;
+  color: abs.$white;
 
   a {
-    color: $white;
+    color: abs.$white;
   }
 }
 
@@ -92,7 +94,7 @@
   padding-left: 15px;
   z-index: 3;
 
-  @include lg-up {
+  @include abs.lg-up {
     padding-left: 65px;
   }
 }
@@ -129,7 +131,7 @@
 .header__social-icons {
   display: none;
 
-  @include lg-up {
+  @include abs.lg-up {
     align-self: center;
     display: block;
     line-height: 0;

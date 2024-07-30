@@ -1,3 +1,5 @@
+@use '../abstracts' as abs;
+
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the skip-link component
 // -----------------------------------------------------------------------------
@@ -7,17 +9,17 @@
  * 1. Removes margin styles from visually-hidden mixin
 **/
 @mixin skip-link() {
-  @include visually-hidden;
+  @include abs.visually-hidden;
 
-  font-family: $sans-serif-stack;
+  font-family: abs.$sans-serif-stack;
   font-size: 18px;
-  font-weight: $font-weight-bold;
+  font-weight: abs.$font-weight-bold;
   margin: 0; /* 1 */
   padding: 15px 20px 18px;
   text-align: center;
 
   &:focus {
-    @include show-on-focus;
+    @include abs.show-on-focus;
 
     text-decoration: underline; /* 1 */
   }
@@ -37,7 +39,7 @@
  * Skip link mixin for colors. Allows users to set background and color of skip link
  * with $background and $color variables. $background and $color are set to work with RAC header.
 **/
-@mixin skip-link-color($background: $flame-orange, $color: $desert-grey) {
+@mixin skip-link-color($background: abs.$flame-orange, $color: abs.$desert-grey) {
   background: $background;
   color: $color;
 

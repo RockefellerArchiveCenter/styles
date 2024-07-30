@@ -1,3 +1,6 @@
+@use '../abstracts' as abs;
+@use 'skip-link';
+
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the table of contents component
 // -----------------------------------------------------------------------------
@@ -23,20 +26,20 @@
 * Styles for the table of contents skip link
 **/
 .toc__skip-link {
-  @include skip-link;
-  @include skip-link-position($left: 0, $top: 0);
+  @include skip-link.skip-link;
+  @include skip-link.skip-link-position($left: 0, $top: 0);
 }
 
 .toc__skip-link--orange {
-  @include skip-link-color;
+  @include skip-link.skip-link-color;
 }
 
 .toc__skip-link--blue {
-  @include skip-link-color($background: $solitude-blue, $color: $regal-blue);
+  @include skip-link.skip-link-color($background: abs.$solitude-blue, $color: abs.$regal-blue);
 }
 
 .toc__skip-link--neutral {
-  @include skip-link-color($background: $desert-grey, $color: $night-grey);
+  @include skip-link.skip-link-color($background: abs.$desert-grey, $color: abs.$night-grey);
 }
 
 /**
@@ -45,7 +48,7 @@
 .toc__title,
 .toc__link-item {
   display: block;
-  font-family: $sans-serif-stack;
+  font-family: abs.$sans-serif-stack;
   line-height: 1.3;
   margin: 0;
   padding: 10px 25px;
@@ -59,12 +62,12 @@
 **/
 .toc__title {
   font-size: 18px;
-  font-weight: $font-weight-bold;
+  font-weight: abs.$font-weight-bold;
 }
 
 .toc__link-item {
   font-size: 14px;
-  font-weight: $font-weight-heavy;
+  font-weight: abs.$font-weight-heavy;
 }
 
 .toc__link-item :hover,
@@ -77,40 +80,40 @@
 * 1. Add additional padding to link items when the TOC has a title.
 **/
 .toc--neutral {
-  background-color: $desert-grey;
+  background-color: abs.$desert-grey;
 }
 
 .toc--neutral .toc__link-item,
 .toc--neutral .toc__title {
-  color: $night-grey;
+  color: abs.$night-grey;
 }
 
 .toc--neutral .active {
-  background-color: $rust-red;
-  color: $desert-grey;
+  background-color: abs.$rust-red;
+  color: abs.$desert-grey;
 }
 
 .toc--blue {
-  background-color: $solitude-blue;
+  background-color: abs.$solitude-blue;
 }
 
 .toc--blue .toc__link-item,
 .toc--blue .toc__title {
-  color: $regal-blue;
+  color: abs.$regal-blue;
 }
 
 .toc--blue .active {
-  background-color: $midnight-blue;
-  color: $solitude-blue;
+  background-color: abs.$midnight-blue;
+  color: abs.$solitude-blue;
 }
 
 .toc--orange {
-  background-color: $flame-orange;
+  background-color: abs.$flame-orange;
 }
 
 .toc--orange .toc__link-item,
 .toc--orange .toc__title {
-  color: $white;
+  color: abs.$white;
 }
 
 .toc__title + div .toc__link-item {
@@ -124,5 +127,5 @@
 }
 
 .toc--orange .active {
-  border: $white 2px solid;
+  border: abs.$white 2px solid;
 }

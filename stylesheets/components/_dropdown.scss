@@ -1,3 +1,5 @@
+@use '../abstracts' as abs;
+
 // -----------------------------------------------------------------------------
 // This file contains styles related to the dropdown menu component, including the button
 // associated with lists of links or menu items.
@@ -18,7 +20,7 @@
 * values until it is opened.
 **/
 .dropdown__list {
-  @include transition-default;
+  @include abs.transition-default;
 
   border-radius: 3px;
   margin-top: 5px;
@@ -58,11 +60,11 @@
 * items.
 **/
 .dropdown__list--navy {
-  background-color: $regal-blue;
+  background-color: abs.$regal-blue;
 }
 
 .dropdown__list--orange {
-  background-color: $flame-orange;
+  background-color: abs.$flame-orange;
 }
 
 /**
@@ -102,7 +104,7 @@
   padding: 10px 14px;
 
   .material-icon {
-    @include material-icon(21px);
+    @include abs.material-icon(21px);
 
     margin-right: 15px;
   }

@@ -1,3 +1,5 @@
+@use '../abstracts' as abs;
+
 // -------------------------------------------
 // This file contains styles related to tables
 // -------------------------------------------
@@ -15,13 +17,13 @@
 }
 
 .table thead th {
-  font-weight: $font-weight-bold;
+  font-weight: abs.$font-weight-bold;
   padding: 20px;
   text-align: left;
 }
 
 .table tbody th {
-  font-weight: $font-weight-normal; /* 1 */
+  font-weight: abs.$font-weight-normal; /* 1 */
   padding: 20px;
   text-align: left;
 }
@@ -55,11 +57,11 @@
 * Defines layout styles for striped table.
 **/
 .table.table-striped tbody tr:nth-child(odd) {
-  background-color: $wan-white-grey;
+  background-color: abs.$wan-white-grey;
 }
 
 .table.table-striped tbody tr:nth-child(even) {
-  background-color: $white;
+  background-color: abs.$white;
 }
 
 /**

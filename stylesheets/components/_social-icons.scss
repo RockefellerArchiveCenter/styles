@@ -1,3 +1,5 @@
+@use '../abstracts' as abs;
+
 // -----------------------------------------------------------------------------
 // This file contains all styles related to social media icons
 // -----------------------------------------------------------------------------
@@ -34,8 +36,8 @@
     @media (prefers-reduced-motion: no-preference) {
       svg g,
       svg path {
-        fill: $flame-orange;
-        transition: $transition-default;
+        fill: abs.$flame-orange;
+        transition: abs.$transition-default;
       }
     }
   }

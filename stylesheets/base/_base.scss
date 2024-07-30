@@ -1,3 +1,5 @@
+@use '../abstracts' as abs;
+
 // -----------------------------------------------------------------------------
 // This file contains very basic styles.
 // -----------------------------------------------------------------------------
@@ -39,5 +41,5 @@ body {
  */
 button:focus,
 a:focus {
-  @include focus-default;
+  @include abs.focus-default;
 }

@@ -1,3 +1,6 @@
+@use '../abstracts' as abs;
+@use 'sass:color';
+
 // -----------------------------------------------------------------------------
 // This file contains all styles related to form inputs
 // -----------------------------------------------------------------------------
@@ -6,7 +9,7 @@
 * Styling for placeholder text
 **/
 ::placeholder {
-  color: $mortar-grey;
+  color: abs.$mortar-grey;
   font-size: 18px;
 }
 
@@ -18,13 +21,13 @@ input,
 fieldset,
 select,
 textarea {
-  @include input-text;
+  @include abs.input-text;
 
   width: 100%; /* 1 */
 }
 
 label {
-  @include input-text;
+  @include abs.input-text;
 }
 
 fieldset {
@@ -32,10 +35,10 @@ fieldset {
   padding: 0;
 
   legend {
-    @include input-text;
+    @include abs.input-text;
 
     font-size: 12px;
-    font-weight: $font-weight-bold;
+    font-weight: abs.$font-weight-bold;
     text-transform: uppercase;
   }
 }
@@ -43,19 +46,19 @@ fieldset {
 .input select,
 .input input,
 .input textarea {
-  background-color: $white;
-  border: 1px solid $night-grey;
+  background-color: abs.$white;
+  border: 1px solid abs.$night-grey;
   border-radius: 3px;
   padding: 6px;
 }
 
 .input__error {
-  background-color: lighten($flame-orange, 45%);
-  border: 1px solid $flame-orange;
+  background-color: color.adjust(abs.$flame-orange, $lightness: 45%);
+  border: 1px solid abs.$flame-orange;
   border-radius: 3px;
-  color: $night-grey;
+  color: abs.$night-grey;
   display: block;
-  font-family: $sans-serif-stack;
+  font-family: abs.$sans-serif-stack;
   font-size: 14px;
   font-style: italic;
   margin: 10px 0;
@@ -64,7 +67,7 @@ fieldset {
 }
 
 .input__help-text {
-  color: $mortar-grey;
+  color: abs.$mortar-grey;
   font-size: 13px;
   font-style: italic;
   margin: 0;
@@ -93,7 +96,7 @@ fieldset {
 }
 
 .checkbox:focus + label::before {
-  outline: 2px solid $mortar-grey;
+  outline: 2px solid abs.$mortar-grey;
 }
 
 .checkbox:not(:checked),
@@ -122,7 +125,7 @@ fieldset {
 
 .checkbox:not(:checked) + label::after,
 .checkbox:checked + label::after { /* 5 */
-  @include transition-default;
+  @include abs.transition-default;
 
   content: '\2713'; /* 7 */
   font-family: monospace; /* 8 */
@@ -151,57 +154,57 @@ fieldset {
 **/
 .checkbox--blue:not(:checked) + label::before,
 .checkbox--blue:checked + label::before {
-  background-color: $white;
-  border: 1px solid $regal-blue;
+  background-color: abs.$white;
+  border: 1px solid abs.$regal-blue;
 }
 
 .checkbox--blue:not(:checked) + label::after,
 .checkbox--blue:checked + label::after {
-  background-color: $yale-blue;
-  border: 1px solid $yale-blue;
-  color: $white;
+  background-color: abs.$yale-blue;
+  border: 1px solid abs.$yale-blue;
+  color: abs.$white;
 }
 
 .checkbox--orange:not(:checked) + label::before,
 .checkbox--orange:checked + label::before {
-  background-color: $white;
-  border: 1px solid $rust-red;
+  background-color: abs.$white;
+  border: 1px solid abs.$rust-red;
 }
 
 .checkbox--orange:not(:checked) + label::after,
 .checkbox--orange:checked + label::after {
-  background-color: $flame-orange;
-  border: 1px solid $flame-orange;
-  color: $white;
+  background-color: abs.$flame-orange;
+  border: 1px solid abs.$flame-orange;
+  color: abs.$white;
 }
 
 .checkbox--white:not(:checked) + label,
 .checkbox--white:checked + label {
-  background-color: $white;
+  background-color: abs.$white;
 }
 
 .checkbox--white:not(:checked) + label::before,
 .checkbox--white:checked + label::before {
-  border: 1px solid $night-grey;
+  border: 1px solid abs.$night-grey;
 }
 
 .checkbox--white:not(:checked) + label::after,
 .checkbox--white:checked + label::after {
-  background-color: $white;
-  border: 1px solid $night-grey;
-  color: $night-grey;
+  background-color: abs.$white;
+  border: 1px solid abs.$night-grey;
+  color: abs.$night-grey;
 }
 
 /**
 * Styles for disabled checkboxes
 **/
 .checkbox:disabled + label::before {
-  background-color: $wan-white-grey;
-  border: 1px solid $mortar-grey;
+  background-color: abs.$wan-white-grey;
+  border: 1px solid abs.$mortar-grey;
 }
 
 .checkbox:disabled + label {
-  color: $mortar-grey;
+  color: abs.$mortar-grey;
   cursor: not-allowed;
 }
 

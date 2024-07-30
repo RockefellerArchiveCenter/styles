@@ -1,3 +1,5 @@
+@use '../abstracts' as abs;
+
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
@@ -6,9 +8,9 @@
 * Primary Footer title mixin
 **/
 @mixin footer-primary-title-text {
-  font-family: $sans-serif-stack;
+  font-family: abs.$sans-serif-stack;
   font-size: 21px;
-  font-weight: $font-weight-heavy;
+  font-weight: abs.$font-weight-heavy;
   letter-spacing: 4px;
   line-height: 26px;
   text-transform: uppercase;
@@ -18,8 +20,8 @@
 * Primary Footer text mixin
 **/
 @mixin footer-primary-text {
-  color: $regal-blue;
-  font-family: $serif-stack;
+  color: abs.$regal-blue;
+  font-family: abs.$serif-stack;
   font-size: 15px;
   line-height: 22px;
 }
@@ -32,7 +34,7 @@
 
   &:hover,
   &:focus {
-    color: $flame-orange;
+    color: abs.$flame-orange;
   }
 }
 
@@ -42,7 +44,7 @@
 @mixin footer-secondary-text {
   @include footer-primary-text;
 
-  color: $white;
+  color: abs.$white;
 }
 
 /**
@@ -53,7 +55,7 @@
 
   &:hover,
   &:focus {
-    color: $desert-grey;
+    color: abs.$desert-grey;
   }
 }
 
@@ -73,7 +75,7 @@ footer {
 * Primary Footer styles.
 * 1. Insertion of a visual line break without causing screen readers to pause.
 **/
-.footer-primary { background: $wan-white-grey; }
+.footer-primary { background: abs.$wan-white-grey; }
 .footer-primary__text { @include footer-primary-text; }
 .footer-primary__link { @include footer-primary-link; }
 
@@ -91,27 +93,27 @@ footer {
   margin-bottom: 40px;
   margin-left: 0;
 
-  @include md-up {
+  @include abs.md-up {
     margin-bottom: 50px;
   }
 }
 
 .footer-primary__address {
-  @include md-up {
+  @include abs.md-up {
     grid-column: 1 / span 6;
   }
 
-  @include lg-up {
+  @include abs.lg-up {
     grid-column: 1 / span 3;
   }
 }
 
 .footer-primary__reading-room {
-  @include md-up {
+  @include abs.md-up {
     grid-column: 7 / span 6;
   }
 
-  @include lg-up {
+  @include abs.lg-up {
     grid-column: 4 / span 3;
   }
 }
@@ -121,14 +123,14 @@ footer {
   margin-bottom: 30px;
   margin-left: 0;
 
-  @include lg-up {
+  @include abs.lg-up {
     grid-column: 8 / span 5;
     justify-self: end;
   }
 }
 
 .footer-primary__social .social-icons {
-  @include lg-up {
+  @include abs.lg-up {
     margin: 0 0 18px auto;
   }
 }
@@ -140,7 +142,7 @@ footer {
 /**
 * Secondary Footer styles.
 **/
-.footer-secondary { background: $regal-blue; }
+.footer-secondary { background: abs.$regal-blue; }
 .footer-secondary__text { @include footer-secondary-text; }
 .footer-secondary__link { @include footer-secondary-link; }
 
@@ -149,13 +151,13 @@ footer {
   list-style: none;
   padding: 0;
 
-  @include lg-up { text-align: right; }
+  @include abs.lg-up { text-align: right; }
 }
 
 .footer-secondary__list-item {
   display: block;
 
-  @include md-up {
+  @include abs.md-up {
     display: inline-block;
     padding-right: 28px;
   }

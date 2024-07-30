@@ -1,3 +1,6 @@
+@use '../abstracts' as abs;
+@use 'sass:color';
+
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the card component.
 // -----------------------------------------------------------------------------
@@ -6,14 +9,14 @@
 * Mixin for text used in cards
 **/
 @mixin card-text {
-  color: $night-grey;
-  font-family: $sans-serif-stack;
+  color: abs.$night-grey;
+  font-family: abs.$sans-serif-stack;
   font-size: 15px;
-  font-weight: $font-weight-normal;
+  font-weight: abs.$font-weight-normal;
   line-height: 24px;
   margin-top: 8px;
 
-  @include lg-up {
+  @include abs.lg-up {
     margin: 10px 0;
   }
 }
@@ -27,14 +30,14 @@
   @include card-text;
 
   font-size: 18px;
-  font-weight: $font-weight-bold;
+  font-weight: abs.$font-weight-bold;
   line-height: 22px; /* 1 */
   margin-top: 0;
   text-decoration: none;
 
   &:hover,
   &:focus {
-    color: $night-grey;
+    color: abs.$night-grey;
     text-decoration: none;
   }
 }
@@ -78,27 +81,27 @@
   @include card-element-flex;
 
   align-items: flex-start;
-  background-color: $desert-grey;
-  border-radius: $border-radius-default;
-  box-shadow: 0 0 0 1px $silver-grey, 0 0 4px 0 lighten($silver-grey, 5%);
+  background-color: abs.$desert-grey;
+  border-radius: abs.$border-radius-default;
+  box-shadow: 0 0 0 1px abs.$silver-grey, 0 0 4px 0 color.adjust(abs.$silver-grey, $lightness: 5%);
   padding: 26px 20px;
   position: relative; /* 1 */
 
-  @include md-up {
+  @include abs.md-up {
     min-height: 210px;
     padding: 32px 20px;
   }
 
-  @include lg-up {
+  @include abs.lg-up {
     min-height: 220px;
     padding: 32px 26px;
   }
 
   &:hover,
   &:focus {
-    @include transition-default;
+    @include abs.transition-default;
 
-    box-shadow: 0 0 0 2px $crusta-orange, 0 0 8px 2px lighten($silver-grey, 10%);
+    box-shadow: 0 0 0 2px abs.$crusta-orange, 0 0 8px 2px color.adjust(abs.$silver-grey, $lightness: 10%);
   }
 }
 
@@ -135,12 +138,9 @@
 
   width: 100%; /* 2 */
   &::after { /* 1 */
-    bottom: 0;
     content: '';
-    left: 0;
+    inset: 0;
     position: absolute;
-    right: 0;
-    top: 0;
   }
 }
 
@@ -160,7 +160,7 @@
 .card--container {
   &:hover,
   &:focus {
-    box-shadow: 0 0 0 1px $silver-grey, 0 0 4px 0 lighten($silver-grey, 10%); /* 1 */
+    box-shadow: 0 0 0 1px abs.$silver-grey, 0 0 4px 0 color.adjust(abs.$silver-grey, $lightness: 10%); /* 1 */
   }
 }
 

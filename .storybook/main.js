@@ -9,7 +9,7 @@ const config = {
     options: {
       actions: false
     }
-  }, '@whitespace/storybook-addon-html', '@storybook/addon-links', '@storybook/addon-a11y', {
+  }, '@storybook/addon-links', '@storybook/addon-a11y', {
     name: '@storybook/preset-scss',
     options: {
       cssLoaderOptions: {
@@ -18,7 +18,7 @@ const config = {
         }
       }
     }
-  }, '@storybook/addon-webpack5-compiler-swc', '@chromatic-com/storybook'],
+  }, '@storybook/addon-webpack5-compiler-swc'],
 
   webpackFinal: async (config, { configType }) => {
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'

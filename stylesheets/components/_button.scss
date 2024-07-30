@@ -1,3 +1,6 @@
+@use '../abstracts' as abs;
+@use 'sass:color';
+
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
@@ -24,15 +27,15 @@
 * 3. Removes default link margin for links styled as buttons
 **/
 .btn {
-  @include transition-default;
+  @include abs.transition-default;
 
   align-items: center; /* 1 */
-  border-radius: $border-radius-default;
+  border-radius: abs.$border-radius-default;
   border-style: solid;
   border-width: 1px;
   cursor: pointer;
   display: inline-flex; /* 1 */
-  font-family: $sans-serif-stack;
+  font-family: abs.$sans-serif-stack;
   letter-spacing: 1.5px;
   line-height: inherit; /* 2 */
   margin-bottom: 0; /* 3 */
@@ -68,7 +71,7 @@
   font-weight: bold;
 
   .material-icon {
-    @include material-icon(16px, 16px);
+    @include abs.material-icon(16px, 16px);
   }
 }
 
@@ -76,7 +79,7 @@
   @include button-size(12px, 15px, 13px 14px);
 
   .material-icon {
-    @include material-icon(20px, 15px);
+    @include abs.material-icon(20px, 15px);
   }
 }
 
@@ -84,7 +87,7 @@
   @include button-size(14px, 18px, 18px);
 
   .material-icon {
-    @include material-icon(20px, 17px);
+    @include abs.material-icon(20px, 17px);
   }
 }
 
@@ -93,85 +96,85 @@
 * each on hover and/or focus.
 **/
 .btn--blue {
-  @include button-color($yale-blue, $yale-blue, $white);
+  @include button-color(abs.$yale-blue, abs.$yale-blue, abs.$white);
 
   &:hover,
   &:focus {
-    background-color: darken($yale-blue, 10%);
-    border-color: darken($yale-blue, 10%);
-    color: $white;
+    background-color: color.adjust(abs.$yale-blue, $lightness: -10%);
+    border-color: color.adjust(abs.$yale-blue, $lightness: -10%);
+    color: abs.$white;
   }
 }
 
 .btn--light-blue {
-  @include button-color($solitude-blue, $regal-blue, $regal-blue);
+  @include button-color(abs.$solitude-blue, abs.$regal-blue, abs.$regal-blue);
 
   &:hover,
   &:focus {
-    background-color: darken($solitude-blue, 10%);
-    color: $regal-blue;
+    background-color: color.adjust(abs.$solitude-blue, $lightness: -10%);
+    color: abs.$regal-blue;
   }
 }
 
 .btn--navy {
-  @include button-color($regal-blue, $regal-blue, $white);
+  @include button-color(abs.$regal-blue, abs.$regal-blue, abs.$white);
 
   &:hover,
   &:focus {
-    background-color: lighten($regal-blue, 10%);
-    border-color: lighten($regal-blue, 10%);
-    color: $white;
+    background-color: color.adjust(abs.$regal-blue, $lightness: 10%);
+    border-color: color.adjust(abs.$regal-blue, $lightness: 10%);
+    color: abs.$white;
   }
 }
 
 .btn--orange {
-  @include button-color($flame-orange, $flame-orange, $white);
+  @include button-color(abs.$flame-orange, abs.$flame-orange, abs.$white);
 
   &:hover,
   &:focus {
-    background-color: darken($flame-orange, 10%);
-    border-color: darken($flame-orange, 10%);
-    color: $desert-grey;
+    background-color: color.adjust(abs.$flame-orange, $lightness: -10%);
+    border-color: color.adjust(abs.$flame-orange, $lightness: -10%);
+    color: abs.$desert-grey;
   }
 }
 
 .btn--transparent {
-  @include button-color(transparent, $dark-grey, $mortar-grey);
+  @include button-color(transparent, abs.$dark-grey, abs.$mortar-grey);
 
   &:hover,
   &:focus {
-    border-color: darken($dark-grey, 20%);
-    color: darken($mortar-grey, 20%);
+    border-color: color.adjust(abs.$dark-grey, $lightness: -20%);
+    color: color.adjust(abs.$mortar-grey, $lightness: -20%);
   }
 }
 
 .btn--gray {
-  @include button-color($desert-grey, $dark-grey, $mortar-grey);
+  @include button-color(abs.$desert-grey, abs.$dark-grey, abs.$mortar-grey);
 
   &:hover,
   &:focus {
-    background-color: darken($desert-grey, 5%);
-    color: $mortar-grey;
+    background-color: color.adjust(abs.$desert-grey, $lightness: -5%);
+    color: abs.$mortar-grey;
   }
 }
 
 .btn--dark-gray {
-  @include button-color($dark-grey, $dark-grey, $black);
+  @include button-color(abs.$dark-grey, abs.$dark-grey, abs.$black);
 
   &:hover,
   &:focus {
-    background-color: darken($dark-grey, 5%);
-    border-color: darken($dark-grey, 5%);
-    color: $black;
+    background-color: color.adjust(abs.$dark-grey, $lightness: -5%);
+    border-color: color.adjust(abs.$dark-grey, $lightness: -5%);
+    color: abs.$black;
   }
 }
 
 .btn--black {
-  @include button-color($black, $white, $white);
+  @include button-color(abs.$black, abs.$white, abs.$white);
 
   &:hover,
   &:focus {
-    background-color: lighten($black, 20%);
-    color: $white;
+    background-color: color.adjust(abs.$black, $lightness: 20%);
+    color: abs.$white;
   }
 }

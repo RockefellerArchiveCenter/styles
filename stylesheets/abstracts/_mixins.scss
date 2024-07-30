@@ -1,3 +1,5 @@
+@use 'variables';
+
 // -----------------------------------------------------------------------------
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
@@ -34,7 +36,7 @@
 
 // Default focus styles for consistency across browsers and improved accessibility.
 @mixin focus-default {
-  outline: solid 2px $mortar-grey;
+  outline: solid 2px variables.$mortar-grey;
   outline-offset: 2px;
 }
 
@@ -43,7 +45,7 @@
 **/
 @mixin transition-default {
   @media screen and (prefers-reduced-motion: no-preference) {
-    transition: $transition-default;
+    transition: variables.$transition-default;
   }
 }
 
@@ -96,11 +98,11 @@
 **/
 
 @mixin md-up {
-  @media screen and (min-width: $break-md) { @content; }
+  @media screen and (min-width: variables.$break-md) { @content; }
 }
 
 @mixin lg-up {
-  @media screen and (min-width: $break-lg) { @content; }
+  @media screen and (min-width: variables.$break-lg) { @content; }
 }
 
 /**
@@ -151,8 +153,8 @@
 * Mixin for default input text styles
 **/
 @mixin input-text {
-  color: $night-grey;
-  font-family: $sans-serif-stack;
+  color: variables.$night-grey;
+  font-family: variables.$sans-serif-stack;
   font-size: 14px;
 }
 
@@ -180,12 +182,12 @@
 @mixin material-icon($font-size:24px, $line-height:normal) {
   direction: ltr;
   display: inline-block;
-  font-family: $icons;
+  font-family: variables.$icons;
   font-feature-settings: 'liga';
   font-size: $font-size;
   -webkit-font-smoothing: antialiased;
   font-style: normal;
-  font-weight: $font-weight-normal;
+  font-weight: variables.$font-weight-normal;
   letter-spacing: normal;
   line-height: $line-height;
   pointer-events: none;

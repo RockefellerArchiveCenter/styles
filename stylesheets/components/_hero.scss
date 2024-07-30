@@ -1,3 +1,5 @@
+@use '../abstracts' as abs;
+
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the hero component
 // -----------------------------------------------------------------------------
@@ -11,7 +13,7 @@
   flex-wrap: wrap;
   padding: 30px;
 
-  @include md-up {
+  @include abs.md-up {
     flex-wrap: nowrap;
     justify-content: center;
   }
@@ -27,11 +29,11 @@
   img {
     width: 85px;
 
-    @include md-up {
+    @include abs.md-up {
       width: 120px;
     }
 
-    @include lg-up {
+    @include abs.lg-up {
       width: 160px;
     }
   }
@@ -41,22 +43,22 @@
  * Styles the text used in a hero, including font stylings.
  */
 .hero__text {
-  color: $night-grey;
-  font-family: $serif-stack;
+  color: abs.$night-grey;
+  font-family: abs.$serif-stack;
   font-size: 18px;
-  font-weight: $font-weight-bold;
+  font-weight: abs.$font-weight-bold;
   line-height: 24px;
   text-align: left;
   width: 100%;
 
-  @include md-up {
+  @include abs.md-up {
     font-size: 28px;
     line-height: 38px;
     margin-left: 30px;
     width: unset;
   }
 
-  @include lg-up {
+  @include abs.lg-up {
     font-size: 34px;
     line-height: 42px;
     margin-left: 50px;
