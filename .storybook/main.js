@@ -9,7 +9,7 @@ const config = {
     options: {
       actions: false
     }
-  }, '@storybook/addon-links', '@storybook/addon-a11y', {
+  }, '@whitespace/storybook-addon-html', '@storybook/addon-links', '@storybook/addon-a11y', {
     name: '@storybook/preset-scss',
     options: {
       cssLoaderOptions: {
