@@ -9,10 +9,10 @@
 .social-icons {
   display: flex;
   justify-content: space-between;
-  max-width: 250px;
+  max-width: 200px;
 
   a {
-    line-height: inherit; /* 1 */
+    line-height: 0; /* 1 */
     margin: 0;
     text-decoration: none;
   }
