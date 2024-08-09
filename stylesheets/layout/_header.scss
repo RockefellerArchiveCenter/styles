@@ -29,7 +29,6 @@
 
   @include abs.md-up {
     font-size: 15px;
-    line-height: 18px;
   }
 
   &:hover,
@@ -84,17 +83,19 @@
 }
 
 /**
-* Styles for header branding section that includes title, subtitle, and/or image.
+* Styles for header branding section that includes title and subtitle.
 **/
 .header__brand {
-  align-content: center;
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
   margin-right: auto;
   padding-left: 15px;
+  place-content: center center;
   z-index: 3;
 
   @include abs.lg-up {
+    flex-direction: row;
+    justify-content: flex-start;
     padding-left: 65px;
   }
 }
@@ -102,26 +103,15 @@
 .header__brand-title {
   @include header-title;
 
-  margin: 0 10px 0 0;
+  margin: 0 10px 5px 0;
+
+  @include abs.lg-up {
+    margin: 0 10px 0 0;
+  }
 }
 
 .header__brand-subtitle {
   @include header-subtitle;
-
-  margin: 4px 0 0;
-}
-
-/**
-* Styles for header brand image.
-* 1. Specifies height to fit inside the header
-**/
-.header__brand-image {
-  line-height: 0;
-  margin: 0;
-
-  img {
-    height: 56px; /* 1 */
-  }
 }
 
 /**
