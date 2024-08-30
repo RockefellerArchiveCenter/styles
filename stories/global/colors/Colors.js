@@ -1,4 +1,4 @@
-import variables from '../../../stylesheets/abstracts/_variables.scss'
+import * as variables from '../../../stylesheets/abstracts/_variables.scss'
 
 export const colors = {
   crustaOrange: variables.crustaorange,
