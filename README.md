@@ -36,5 +36,8 @@ yarn lint-fix
 
 Linting is set up to run in the CI pipeline. The build will fail if linting does not pass.
 
+## Attribution
+The `/stylesheets` structure and README files are adapted from [sass-biolerplate](https://github.com/KittyGiraudel/sass-boilerplate), created by Kitty Giraudel.
+
 ## License
 This code is released under an [MIT License](LICENSE).
