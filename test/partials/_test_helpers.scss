@@ -1,4 +1,5 @@
-@import '../../../stylesheets/main.scss';
+@import '../../../stylesheets/abstracts/variables.scss';
+@import '../../../stylesheets/abstracts/mixins.scss';
 
 @include describe('The focus-default mixin') {
   @include it('Sets default focus styles') {

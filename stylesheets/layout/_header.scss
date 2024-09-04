@@ -1,3 +1,5 @@
+@use '../abstracts' as abs;
+
 // -----------------------------------------------------------------------------
 // This file contains styles related to the header of the site/application.
 // For related components, see styles in the dropdown, nav, and social-icons components.
@@ -8,7 +10,7 @@
 * 1. Removes default link underline
 **/
 @mixin header-text {
-  font-family: $sans-serif-stack;
+  font-family: abs.$sans-serif-stack;
   font-size: 12px;
   text-decoration: none; /* 1 */
 }
@@ -20,12 +22,12 @@
 @mixin header-title {
   @include header-text;
 
-  font-weight: $font-weight-heavy;
+  font-weight: abs.$font-weight-heavy;
   letter-spacing: 0.1em;
   line-height: 13px;
   text-transform: uppercase;
 
-  @include md-up {
+  @include abs.md-up {
     font-size: 15px;
   }
 
@@ -63,20 +65,20 @@
 * Styles for header colors.
 **/
 .header--white {
-  background-color: $white;
-  color: $regal-blue;
+  background-color: abs.$white;
+  color: abs.$regal-blue;
 
   a {
-    color: $regal-blue;
+    color: abs.$regal-blue;
   }
 }
 
 .header--blue {
-  background-color: $regal-blue;
-  color: $white;
+  background-color: abs.$regal-blue;
+  color: abs.$white;
 
   a {
-    color: $white;
+    color: abs.$white;
   }
 }
 
@@ -84,15 +86,14 @@
 * Styles for header branding section that includes title and subtitle.
 **/
 .header__brand {
-  align-content: center;
   display: flex;
   flex-flow: column wrap;
-  justify-content: center;
   margin-right: auto;
   padding-left: 15px;
+  place-content: center center;
   z-index: 3;
 
-  @include lg-up {
+  @include abs.lg-up {
     flex-direction: row;
     justify-content: flex-start;
     padding-left: 65px;
@@ -104,7 +105,7 @@
 
   margin: 0 10px 5px 0;
 
-  @include lg-up {
+  @include abs.lg-up {
     margin: 0 10px 0 0;
   }
 }
@@ -120,7 +121,7 @@
 .header__social-icons {
   display: none;
 
-  @include lg-up {
+  @include abs.lg-up {
     align-self: center;
     display: block;
     line-height: 0;

@@ -1,8 +1,9 @@
+@use '../abstracts' as abs;
+@use 'sass:color';
+
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the modal component.
 // -----------------------------------------------------------------------------
-
-@use 'sass:color';
 
 /**
 * Variables for modals
@@ -17,14 +18,11 @@ $modal-header-height: 52px;
 * 2. Z-index value should position overlay on top of other content.
 **/
 .modal__overlay {
-  @include transition-default;
+  @include abs.transition-default;
 
-  background-color: color.adjust($black, $alpha: -0.5);
-  bottom: 0;
-  left: 0;
+  background-color: color.adjust(abs.$black, $alpha: -0.5);
+  inset: 0;
   position: fixed; /* 1 */
-  right: 0;
-  top: 0;
   z-index: 1000; /* 2 */
 }
 
@@ -34,16 +32,13 @@ $modal-header-height: 52px;
 * 2. Z-index value positions modal on top of modal overlay.
 **/
 .modal {
-  background-color: $white;
-  border: 1px solid $night-grey;
-  border-radius: $border-radius-default;
-  bottom: $modal-content-margin;
-  font-family: $sans-serif-stack;
-  left: $modal-content-margin;
+  background-color: abs.$white;
+  border: 1px solid abs.$night-grey;
+  border-radius: abs.$border-radius-default;
+  font-family: abs.$sans-serif-stack;
+  inset: $modal-content-margin;
   overflow: auto;
   position: absolute; /* 1 */
-  right: $modal-content-margin;
-  top: $modal-content-margin;
   z-index: 1001; /* 2 */
 }
 
@@ -52,9 +47,9 @@ $modal-header-height: 52px;
 * 1. Setting a fixed height allows for calculation of the modal body height below.
 **/
 .modal__header {
-  background-color: $night-grey;
+  background-color: abs.$night-grey;
   box-sizing: border-box;
-  color: $white;
+  color: abs.$white;
   display: flex;
   height: $modal-header-height; /* 1 */
   justify-content: space-between;

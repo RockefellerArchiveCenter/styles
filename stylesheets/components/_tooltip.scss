@@ -1,3 +1,9 @@
+@use '../abstracts' as abs;
+
+// -------------------------------------------
+// This file contains styles related to tooltips
+// -------------------------------------------
+
 $tooltip-width: 200px;
 $tooltip-padding: 5px;
 
@@ -7,9 +13,9 @@ $tooltip-padding: 5px;
 }
 
 .tooltip {
-  background-color: $night-grey;
-  border-radius: $border-radius-default;
-  color: $white;
+  background-color: abs.$night-grey;
+  border-radius: abs.$border-radius-default;
+  color: abs.$white;
   padding: $tooltip-padding;
   position: absolute;
   text-align: center;
@@ -17,7 +23,7 @@ $tooltip-padding: 5px;
   z-index: 1;
 
   &::after {
-    border: calc($tooltip-padding * 2) solid $night-grey;
+    border: calc($tooltip-padding * 2) solid abs.$night-grey;
     content: '';
     position: absolute;
     transform: translateY(-50%);
@@ -30,7 +36,7 @@ $tooltip-padding: 5px;
   margin-left: - calc($tooltip-width / 2);
 
   &::after {
-    border-color: $night-grey transparent transparent transparent;
+    border-color: abs.$night-grey transparent transparent transparent;
     bottom: - calc($tooltip-padding * 5);
     left: calc(50% - calc($tooltip-padding * 2));
   }
@@ -42,7 +48,7 @@ $tooltip-padding: 5px;
   top: calc(100% + $tooltip-padding);
 
   &::after {
-    border-color: transparent transparent $night-grey transparent;
+    border-color: transparent transparent abs.$night-grey transparent;
     left: calc(50% - calc($tooltip-padding * 2));
     top: - $tooltip-padding;
   }
@@ -53,7 +59,7 @@ $tooltip-padding: 5px;
   top: calc(100% / 4);
 
   &::after {
-    border-color: transparent transparent transparent $night-grey;
+    border-color: transparent transparent transparent abs.$night-grey;
     right: - calc($tooltip-padding * 3);
     top: 50%;
   }
@@ -64,7 +70,7 @@ $tooltip-padding: 5px;
   top: calc(100% / 4);
 
   &::after {
-    border-color: transparent $night-grey transparent transparent;
+    border-color: transparent abs.$night-grey transparent transparent;
     left: - calc($tooltip-padding * 3);
     top: 50%;
   }

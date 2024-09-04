@@ -1,3 +1,5 @@
+@use '../abstracts' as abs;
+
 // -----------------------------------------------------------------------------
 // This file contains CSS helper classes.
 // -----------------------------------------------------------------------------
@@ -22,8 +24,8 @@
  */
 
 .container {
-  margin: 0 $gutters-default; /* 1 */
-  width: calc(100% - (#{$gutters-default}) * 2); /* 2 */
+  margin: 0 abs.$gutters-default; /* 1 */
+  width: calc(100% - (#{abs.$gutters-default}) * 2); /* 2 */
 }
 
 .container--full-width {
@@ -44,41 +46,41 @@
 }
 
 .grid {
-  @include twelve-column-grid; /* 6 */
+  @include abs.twelve-column-grid; /* 6 */
 }
 
 .visually-hidden {
-  @include visually-hidden;
+  @include abs.visually-hidden;
 }
 
 /**
  * Defines classes to show or hide elements based on mixins.
  **/
 .hide-on-lg-up {
-  @include hide-on-lg-up;
+  @include abs.hide-on-lg-up;
 }
 
 .show-on-lg-up {
-  @include show-on-lg-up;
+  @include abs.show-on-lg-up;
 }
 
 .hide-on-md-up {
-  @include hide-on-md-up;
+  @include abs.hide-on-md-up;
 }
 
 .show-on-md-up {
-  @include show-on-md-up;
+  @include abs.show-on-md-up;
 }
 
 .show-on-focus {
-  @include show-on-focus;
+  @include abs.show-on-focus;
 }
 
 /**
 * Base class for material icons setting 24px font size and normal line-height.
 **/
 .material-icon {
-  @include material-icon;
+  @include abs.material-icon;
 }
 
 /**

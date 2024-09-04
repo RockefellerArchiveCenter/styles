@@ -1,3 +1,5 @@
+@use '../abstracts' as abs;
+
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the pagination component
 // -----------------------------------------------------------------------------
@@ -6,7 +8,7 @@
  * Class for pagination to specify typography and list style for paginated lists.
  */
 .pagination__list {
-  font-family: $sans-serif-stack;
+  font-family: abs.$sans-serif-stack;
   list-style: none;
   padding-left: 0;
 
@@ -15,7 +17,7 @@
   }
 
   .material-icon {
-    @include material-icon(23px, 23px);
+    @include abs.material-icon(23px, 23px);
 
     margin-bottom: 3px;
     pointer-events: unset;
@@ -30,7 +32,7 @@
   display: inline-block;
   padding: 0 5px;
 
-  @include lg-up {
+  @include abs.lg-up {
     padding: 0 7px;
   }
 }
@@ -57,7 +59,7 @@
  * Styles the color and cursor actions for the active page list item.
  */
 .page__active a {
-  color: $night-grey;
+  color: abs.$night-grey;
   cursor: default;
 }
 
@@ -85,7 +87,7 @@
  * Class to define the styles for the deactivated pagination arrows.
  */
 .pagination__button.disabled a {
-  color: $night-grey;
+  color: abs.$night-grey;
   cursor: default;
 
   &:hover,

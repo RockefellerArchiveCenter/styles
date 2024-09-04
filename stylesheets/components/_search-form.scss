@@ -1,3 +1,5 @@
+@use '../abstracts' as abs;
+
 // -----------------------------------------------------------------------------------------
 // This file contains styles related to the search form component including input and select
 // -----------------------------------------------------------------------------------------
@@ -32,10 +34,10 @@
 * 2. Changes font-size from the standard input-text mixin
 **/
 .input__search input {
-  @include input-text;
+  @include abs.input-text;
 
   appearance: none; /* 1 */
-  border: 1px solid $night-grey;
+  border: 1px solid abs.$night-grey;
   border-radius: 0; /* 1 */
   font-size: 18px; /* 2 */
   height: 62px;
@@ -50,18 +52,18 @@
 
 .search__submit-btn {
   align-self: flex-end; /* 1 */
-  border-color: $rust-red;
+  border-color: abs.$rust-red;
   border-radius: 0;
   margin-left: -1px;
   padding: 12px 14px;
 
   &:focus {
-    box-shadow: 0 0 0 1px $white inset;
+    box-shadow: 0 0 0 1px abs.$white inset;
     outline: none;
   }
 
   .material-icon {
-    @include material-icon(36px);
+    @include abs.material-icon(36px);
   }
 }
 
@@ -75,7 +77,7 @@
   display: none; /* 2 */
   position: relative;
 
-  @include md-up {
+  @include abs.md-up {
     display: inline-block; /* 2 */
   }
 
@@ -83,7 +85,7 @@
   * Specify size and placement of icon to replace default select expand arrow
   **/
   .material-icon {
-    @include material-icon(20px);
+    @include abs.material-icon(20px);
 
     position: absolute;
     right: 22px;
@@ -97,11 +99,11 @@
 * 1. Remove the default select expand arrow, which is replaced with an icon in the html.
 **/
 .select__search select {
-  @include input-text;
+  @include abs.input-text;
 
   appearance: none; /* 1 */
-  background-color: $white;
-  border: 1px solid $night-grey;
+  background-color: abs.$white;
+  border: 1px solid abs.$night-grey;
   border-radius: 0;
   font-size: 16px;
   height: 62px;

@@ -1,53 +1,41 @@
 @charset "UTF-8";
 
-// 1. Configuration and helpers
-@import
-  'abstracts/variables',
-  'abstracts/functions',
-  'abstracts/mixins';
+// 1. Vendors
+@use 'vendors/normalize';
 
-// 2. Vendors
-@import
-  'vendors/normalize';
+// 2. Base stuff
+@use 'base/base';
+@use 'base/typography';
+@use 'base/helpers';
 
-// 3. Base stuff
-@import
-  'base/base',
-  'base/typography',
-  'base/helpers';
+// 3. Layout-related sections
+@use 'layout/header';
+@use 'layout/footer';
 
-// 4. Layout-related sections
-@import
-  'layout/header',
-  'layout/footer';
+// 4. Components
+@use 'components/alert';
+@use 'components/badge';
+@use 'components/breadcrumbs';
+@use 'components/button';
+@use 'components/card';
+@use 'components/dropdown';
+@use 'components/hero';
+@use 'components/inputs';
+@use 'components/minimap';
+@use 'components/modal';
+@use 'components/nav';
+@use 'components/pagination';
+@use 'components/search-form';
+@use 'components/social-icons';
+@use 'components/skip-link';
+@use 'components/tabs';
+@use 'components/summary-list';
+@use 'components/table-of-contents';
+@use 'components/table';
+@use 'components/tooltip';
 
-// 5. Components
-@import
-  'components/alert',
-  'components/badge',
-  'components/breadcrumbs',
-  'components/button',
-  'components/card',
-  'components/dropdown',
-  'components/hero',
-  'components/inputs',
-  'components/minimap',
-  'components/modal',
-  'components/nav',
-  'components/pagination',
-  'components/search-form',
-  'components/social-icons',
-  'components/skip-link',
-  'components/tabs',
-  'components/summary-list',
-  'components/table-of-contents',
-  'components/table',
-  'components/tooltip';
+// 5. Page-specific styles
+// @use 'pages/home';
 
-// 6. Page-specific styles
-@import
-  'pages/home';
-
-// 7. Themes
-@import
-  'themes/default';
+// 6. Themes
+// @use 'themes/default';

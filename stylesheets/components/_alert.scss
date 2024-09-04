@@ -1,3 +1,5 @@
+@use '../abstracts' as abs;
+
 // -------------------------------------------
 // This file contains styles related to alerts
 // -------------------------------------------
@@ -59,7 +61,7 @@
 * Optional alert icon.
 **/
 .alert__icon {
-  @include material-icon(75px, normal);
+  @include abs.material-icon(75px, normal);
 
   padding-right: 10px;
 }
@@ -75,13 +77,13 @@
 * Styles for alert colors.
 **/
 .alert--blue {
-  @include alert-color($yale-blue, $yale-blue, $white);
+  @include alert-color(abs.$yale-blue, abs.$yale-blue, abs.$white);
 }
 
 .alert--navy {
-  @include alert-color($regal-blue, $regal-blue, $white);
+  @include alert-color(abs.$regal-blue, abs.$regal-blue, abs.$white);
 }
 
 .alert--orange {
-  @include alert-color($flame-orange, $flame-orange, $white);
+  @include alert-color(abs.$flame-orange, abs.$flame-orange, abs.$white);
 }
