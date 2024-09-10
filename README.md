@@ -10,7 +10,7 @@ yarn compile
 ```
 
 ## Storybook
-We use [Storybook](https://storybook.js.org/) to help us develop styles and documentation for components and provide and interactive UI. To run Storybook locally, run `yarn storybook`. Storybook should open in a new browser tab at `http://localhost:6006`.
+We use [Storybook](https://storybook.js.org/) to help us develop styles and documentation for components and provide and interactive UI. To run Storybook locally, run `yarn storybook`. Storybook should open in a new browser tab.
 
 ### Component documentation sources
 We used multiple existing design system documentation and style guides to help document and articulate best practices for our own components, including the [GOV.UK Design System](https://design-system.service.gov.uk/), [Atlassian Design System](https://atlassian.design/), [Carbon](https://www.carbondesignsystem.com/), and [A11y Style Guide](https://a11y-style-guide.com/style-guide/).
