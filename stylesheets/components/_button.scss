@@ -65,6 +65,16 @@
 /**
 * Styles for button sizes. Font sizes and padding are adjusted for each size.
 **/
+.btn--xs {
+  @include button-size(10px, 16px, 8px 10px);
+
+  font-weight: bold;
+
+  .material-icon {
+    @include abs.material-icon(16px, 16px);
+  }
+}
+
 .btn--sm {
   @include button-size(10px, 16px, 8px 10px);
 
