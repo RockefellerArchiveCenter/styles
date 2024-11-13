@@ -1,6 +1,5 @@
 name: update dependencies
 on:
-
   schedule:
     - cron:  '0 0 1 * *'
 
@@ -20,7 +19,7 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: lts/iron
       - name: update
         run: yarn install && yarn upgrade
 
