@@ -32,14 +32,14 @@ jobs:
 
       - name: Install dependencies
         run: yarn install
-      
+
       - name: Compile stylesheet
         run: yarn compile
 
       - name: Build the release
         run: script/build_release.sh $GITHUB_REF_NAME
 
-        - name: Configure AWS Credentials
+      - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4.0.2
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
