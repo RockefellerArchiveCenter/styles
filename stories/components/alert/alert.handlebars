@@ -5,11 +5,9 @@
         </button>
     {{/if}}
     {{# if icon}}
-    <div class="alert__icon-wrapper">
-        <span class="alert__icon" aria-hidden="true">{{icon}}</span>
-    </div>
+    <span class="alert__icon" aria-hidden="true">{{icon}}</span>
     {{/if}}
-    <div class="alert__text-wrapper">
+    <div>
         {{# if title}}<h2 class="alert__header">{{title}}</h2>{{/if}}
         <p class="alert__text">{{text}}</p>
     </div>
