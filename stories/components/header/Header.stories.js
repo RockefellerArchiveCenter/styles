@@ -42,7 +42,7 @@ export const withDropdownItems = (args) => Header(
 
 export const withSocialIcons = () => Header(
   {
-    class: "header--white",
+    class: "header--blue",
     withSocialIcons: true
   }
 )

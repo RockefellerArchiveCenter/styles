@@ -73,12 +73,27 @@
   }
 }
 
+.header--white .nav__btn--dropdown[aria-expanded='true'] {
+  color: abs.$flame-orange;
+}
+
 .header--blue {
   background-color: abs.$regal-blue;
   color: abs.$white;
 
-  a {
+  a,
+  button {
     color: abs.$white;
+  }
+
+  button:focus,
+  .social-icons a:focus {
+    outline-color: abs.$white;
+  }
+
+  svg g,
+  svg path {
+    fill: abs.$white;
   }
 }
 

@@ -201,7 +201,6 @@
 
     &[aria-expanded='true'] {
       border-bottom: 8px solid; /* 1 */
-      color: abs.$flame-orange; /* 1 */
       outline: none; /* 1 */
     }
   }
@@ -303,14 +302,8 @@
 }
 
 /**
-* Styles for orange mobile menu button.
-* 1. Vertical align button in the center of the header
+* Vertical align button in the center of the header
 **/
-.nav__btn--orange {
-  color: abs.$flame-orange;
-  margin-top: 8px; /* 1 */
-
-  &:active {
-    color: abs.$rust-red;
-  }
+.nav__btn {
+  margin-top: 8px;
 }
