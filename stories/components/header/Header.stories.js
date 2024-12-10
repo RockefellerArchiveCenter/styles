@@ -1,5 +1,4 @@
 import Header from './header.handlebars'
-import headerColors from './colors.json'
 
 export default {
   component: Header,
@@ -11,15 +10,15 @@ export default {
   }
 };
 
-export const withTextBrand = () => {
-  const headers = headerColors.map(c => Header({
-    class: c,
+export const withTextBrand = (args) => Header(
+  {
+    ...args,
+    class: "header--blue",
     withTextBrand: true,
     brandTitle: 'blog.rockarch.org',
     brandSubtitle: 'Rockefeller Archive Center Blog'
-  })).join('')
-  return headers
-}
+  }
+)
 
 export const withNavItems = (args) => Header(
   {
