@@ -153,9 +153,10 @@
 }
 
 /* Styles for card that is not a link.
-*  1. Remove hover and focus styles for cards.
-*  2. Enables flexible interaction with elements in a card by removing the pseudo element
+* 1. Remove hover and focus styles for cards.
+* 2. Enables flexible interaction with elements in a card by removing the pseudo element
 *  so that the entire card is not clickable.
+* 3. Add an option for a blue background
 */
 .card--container {
   &:hover,
@@ -168,4 +169,8 @@
   &::after {
     position: relative; /* 2 */
   }
+}
+
+.card--blue {
+  background-color: abs.$solitude-blue; /* 3 */
 }
