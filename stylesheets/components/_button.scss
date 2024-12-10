@@ -42,6 +42,7 @@
   text-decoration: none;
   text-transform: uppercase;
   vertical-align: middle;
+  white-space: nowrap;
 
   &:disabled {
     cursor: unset;
