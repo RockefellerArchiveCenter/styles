@@ -1,0 +1,19 @@
+<fieldset>
+  <legend {{#if required}}aria-required="true" role="radiogroup"{{/if}}{{#if helpText}}aria-describedby="{{this.name}}-help"{{/if}}>{{legend}}{{#if required}} *{{/if}}</legend>
+  {{#if items}}
+    {{#each items}}
+      <div class="input-group">
+        <input class="radiobutton radiobutton--blue" type="radio" id="{{this.value}}" name="{{this.name}}" value="{{this.value}}">
+        <label for="{{this.value}}">{{this.text}}</label>
+      </div>
+    {{/each}}
+    {{#if helpText}}<div id="{{this.name}}-help" class="input__help-text">Choose your preferred fruit from the choices.</div>{{/if}}
+  {{else if colors}}
+    {{#each colors}}
+      <div class="input-group">
+        <input class="radiobutton {{this.class}}" type="radio" id="{{this.value}}" name="{{this.name}}" value="{{this.value}}">
+        <label for="{{this.value}}">{{this.text}}</label>
+      </div>
+    {{/each}}
+  {{/if}}
+</fieldset>
