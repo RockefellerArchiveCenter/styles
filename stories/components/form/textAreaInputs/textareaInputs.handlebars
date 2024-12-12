@@ -4,6 +4,6 @@
         {{#if invalid}} aria-invalid="true" aria-describedby="{{name}}-error"{{/if}}
         {{#if helpText}} aria-describedby="{{name}}-help"{{/if}}
         {{#if required}} required{{/if}}></textarea>
-    {{#if helpText}}<p id="{{name}}-help" class="input__help-text">250 words maximum.</p>{{/if}}
+    {{#if helpText}}<div id="{{name}}-help" class="input__help-text">250 words maximum.</div>{{/if}}
     {{#if invalid}}<div id="{{name}}-error" class="input__error">This message must be shorter than 255 characters.</div>{{/if}}
 </div>
