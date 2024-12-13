@@ -70,7 +70,7 @@ fieldset {
   color: abs.$mortar-grey;
   font-size: 13px;
   font-style: italic;
-  margin: 0;
+  margin: 3px 0 0;
 }
 
 /**
@@ -209,9 +209,33 @@ fieldset {
 }
 
 /**
-* Styles for a group of checkboxes
+* Styles for a group of checkboxes or radio buttons
 **/
 
 fieldset .input-group {
   margin: 3px 0;
 }
+
+/**
+* Styles for radio buttons
+* 1. Adjust size of select target
+**/
+.radiobutton {
+  margin-right: 3px;
+  transform: scale(1.2); /* 1 */
+  width: auto;
+}
+
+.radiobutton--blue {
+  accent-color: abs.$yale-blue;
+}
+
+.radiobutton--orange {
+  accent-color: abs.$flame-orange;
+}
+
+.radiobutton--grey {
+  accent-color: abs.$night-grey;
+}
+
+

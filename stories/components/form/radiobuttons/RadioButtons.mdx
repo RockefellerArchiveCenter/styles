@@ -1,0 +1,49 @@
+import { Meta, Story } from '@storybook/blocks';
+import * as stories from './RadioButtons.stories.js';
+
+<Meta of={stories} />
+
+# Radio Buttons
+
+A set of radio buttons are an input control that allows a user to select only one option
+from a number of choices.
+
+## When to use
+
+Use a set of radio buttons when you need to help users select one option from a list.
+To allow multiple selections, use the checkbox component instead.
+
+## Best practices
+
+- The set of radio buttons must have an associated legend.
+- Each radio button must have a clear and concise label.
+- Users should be warned if selecting a radio button will cause a change in context.
+- If the radio buttons are a required part of the form, include the `required` or `aria-required` property
+  and apply `role="radio"` to the legend, indicate that it is required, and use a form validation message for errors.
+
+## Related components
+
+- Form
+
+## Known issues
+
+No known issues.
+
+## Basic implementation
+
+<Story of={stories.basic} />
+
+## Colors
+
+Radio buttons have three color options by adding `radiobutton--blue`,
+`radiobutton--orange`, or `radiobutton--grey` to the input element. Select each 
+input to see the different color options:
+
+<Story of={stories.colors} />
+
+## Required
+<Story of={stories.required} />
+
+## Help text
+<Story of={stories.helpText} />
+

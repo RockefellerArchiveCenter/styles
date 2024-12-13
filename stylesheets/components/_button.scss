@@ -42,6 +42,7 @@
   text-decoration: none;
   text-transform: uppercase;
   vertical-align: middle;
+  white-space: nowrap;
 
   &:disabled {
     cursor: unset;
@@ -65,13 +66,23 @@
 /**
 * Styles for button sizes. Font sizes and padding are adjusted for each size.
 **/
+.btn--xs {
+  @include button-size(10px, 16px, 3px);
+
+  font-weight: abs.$font-weight-bold;
+
+  .material-icon {
+    @include abs.material-icon(18px);
+  }
+}
+
 .btn--sm {
   @include button-size(10px, 16px, 8px 10px);
 
-  font-weight: bold;
+  font-weight: abs.$font-weight-bold;
 
   .material-icon {
-    @include abs.material-icon(16px, 16px);
+    @include abs.material-icon(16px);
   }
 }
 
@@ -79,7 +90,7 @@
   @include button-size(12px, 15px, 13px 14px);
 
   .material-icon {
-    @include abs.material-icon(20px, 15px);
+    @include abs.material-icon(20px);
   }
 }
 
@@ -87,7 +98,7 @@
   @include button-size(14px, 18px, 18px);
 
   .material-icon {
-    @include abs.material-icon(20px, 17px);
+    @include abs.material-icon(20px);
   }
 }
 

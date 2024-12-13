@@ -20,8 +20,9 @@ case, use radio buttons.
 ## Best practices
 
 - Checkboxes must have a clear and concise label.
+- A group of checkboxes must have an associated legend.
 - Users should be warned if selecting a checkbox will cause a change in context.
-- If the checkbox is a required field include the aria-required property,
+- If a single checkbox input is a required field include the `required` or `aria-required` property,
   indicate that it is a required field, and use a validation message for input errors.
 
 ## Related components
@@ -34,19 +35,20 @@ No known issues.
 
 ## Colors
 
-Checkboxes can come in different colors:
+Checkboxes have three color options:
 
 <Story of={stories.colors} />
 
 ## Required
-
-When a checkbox input is required, additional styles should be applied:
 
 <Story of={stories.required} />
 
 ## Grouping checkboxes
 
 Related checkboxes should be grouped together using a `fieldset`
-with a `legend` that describes the group of inputs:
+with a `legend` that describes the group of inputs. There is no standard programmatic
+way to indicate that at least one checkbox is required to be selected in a fieldset. 
+This should be handled by including the "*" character as part of the legend and, if necessary,
+add form validation and associated error messages to enforce the requirement.
 
 <Story of={stories.groupedCheckboxes} />
