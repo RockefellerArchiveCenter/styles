@@ -8,7 +8,7 @@
 * Defines layout styles for base table.
 * 1. Override default browser styling
 * 2. Removes margins for elements in tables
-# 3. Line height and font size for links, lists, and paragraphs should match
+* 3. Line height font, family, and font size for links, lists, and paragraphs should match
 * existing text styles.
 **/
 .table {
@@ -45,6 +45,7 @@
 .table p,
 .table ul,
 .table ol { /* 3 */
+  font-family: abs.$sans-serif-stack;
   font-size: inherit;
   line-height: inherit;
 }

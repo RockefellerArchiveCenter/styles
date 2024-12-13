@@ -6,6 +6,8 @@
 
 /**
  * Base styles for summary lists.
+ * 1. Line height font, family, and font size for links and lists should match
+ * existing text styles.
  */
 .summary-list {
   border-top: 1px solid abs.$dark-grey;
@@ -13,6 +15,14 @@
   flex-direction: column;
   font-family: abs.$sans-serif-stack;
   width: 100%;
+}
+
+.summary-list a,
+.summary-list ul,
+.summary-list ol { /* 1 */
+  font-family: abs.$sans-serif-stack;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 /**
