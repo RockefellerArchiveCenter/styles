@@ -7,38 +7,56 @@
 /**
  * Base styles for summary lists.
  */
- .summary-list {
+.summary-list {
+  border-top: 1px solid abs.$dark-grey;
   display: flex;
   flex-direction: column;
   font-family: abs.$sans-serif-stack;
   width: 100%;
-  border-top: 1px solid abs.$dark-grey;
 }
 
 /**
  * Styling for rows.
+ * 1. Collapse rows on small screens
  */
 .summary-list__row {
+  border-bottom: 1px solid abs.$dark-grey;
   display: flex;
+  flex-direction: column; /* 1 */
   justify-content: space-between;
   padding: 10px 0;
-  border-bottom: 1px solid abs.$dark-grey;
+
+  @include abs.md-up {
+    flex-direction: row;
+  }
 }
 
 /**
- * Styling for keys
+ * Styling for keys.
  */
 .summary-list__key {
-  flex-basis: 30%;
+  flex-basis: auto; /* 1 */
   font-weight: abs.$font-weight-bold;
+  margin-bottom: 5px;
   overflow-wrap: break-word;
+  padding-right: 5px;
+
+  @include abs.md-up {
+    flex-basis: 30%;
+    margin-bottom: 0;
+  }
 }
 
 /**
- * Styling for values
+ * Styling for values.
  */
 .summary-list__value {
-  flex-basis: 70%;
+  flex-basis: auto; /* 1 */
   overflow-wrap: break-word;
+  margin-left: 0;
+
+  @include abs.md-up {
+    flex-basis: 70%;
+  }
 }
 
