@@ -28,14 +28,14 @@ Media Icons component is an optional component.
 In the header with dropdown items, when the dropdown is open the dropdown buttons in the header move.
 This appears to be related to Storybook's rendering, but works as expected when implemented.
 
-## Branding and Colors
+## Branding
 
-The header can include a simple text brand/site description, and comes in white or dark blue themes. 
-Use the `header--white` and `header--blue` classes to specify color:
+The header can include a simple text brand/site description. This header uses a dark blue theme
+by applying the `header--blue` class:
 
 <Story of={stories.withTextBrand} />
 
-## Navigation
+## Simple Navigation Links
 
 The header can contain navigation items. These can be simple links. Use the `header--blue`
 class in this case. On small screens, the navigation items are replaced by a button and
@@ -44,8 +44,10 @@ tab and toggle the "hideMobileNavItems" switch on a mobile view:
 
 <Story of={stories.withNavItems} />
 
-They can also contain dropdown menus for more complex navigation. Use the `header--white`
-class in this case. To see what this looks like, switch to the Canvas
+## Complex Navigation Links
+
+The header can also contain dropdown menus for more complex navigation. Use either `header--white` or
+`header--blue` classes to style this menu. To see what this looks like, switch to the Canvas
 tab and toggle the "showDropdownItems" switch on any screensize, and the "showmobileDropdownItems"
 on a mobile view. Use javascript to implement the function to show/hide the mobile `id="nav-toggle"` button.
 
@@ -53,6 +55,7 @@ on a mobile view. Use javascript to implement the function to show/hide the mobi
 
 ## Social Media Icons
 
-Social media icons can be added to a header as well.
+Social media icons can also be added. These are styled to work with either the `header--white` or `header--blue`
+themes.
 
 <Story of={stories.withSocialIcons} />

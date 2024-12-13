@@ -1,0 +1,5 @@
+[
+  {"text": "Apple", "name": "fruit", "value": "apple", "class": "radiobutton--blue"},
+  {"text": "Pear", "name": "fruit", "value": "pear", "class": "radiobutton--orange"},
+  {"text": "Peach", "name": "fruit", "value": "peach", "class": "radiobutton--grey"}
+]

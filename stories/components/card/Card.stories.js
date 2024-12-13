@@ -15,4 +15,4 @@ export const basic = (args) => Card({ ...args, link: true })
 
 export const noFooter = (args) => Card({ ...args, link: true, footerText: null })
 
-export const notLink = (args) => Card(args)
+export const container = (args) => Card(args)
