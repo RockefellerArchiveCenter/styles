@@ -72,7 +72,7 @@
   font-weight: abs.$font-weight-bold;
 
   .material-icon {
-    @include abs.material-icon(18px);
+    @include abs.material-icon(18px, 18px);
   }
 }
 
@@ -82,7 +82,7 @@
   font-weight: abs.$font-weight-bold;
 
   .material-icon {
-    @include abs.material-icon(16px);
+    @include abs.material-icon(16px, 16px);
   }
 }
 
@@ -90,7 +90,7 @@
   @include button-size(12px, 15px, 13px 14px);
 
   .material-icon {
-    @include abs.material-icon(20px);
+    @include abs.material-icon(20px, 15px);
   }
 }
 
@@ -98,7 +98,7 @@
   @include button-size(14px, 18px, 18px);
 
   .material-icon {
-    @include abs.material-icon(20px);
+    @include abs.material-icon(20px, 17px);
   }
 }
 
