@@ -39,6 +39,13 @@
 }
 
 /**
+* Allow text to wrap in dropdown list items.
+**/
+.dropdown__list .btn {
+  white-space: wrap;
+}
+
+/**
 * Styles for a dropdown list of items used on small screens
 * like the dropdown opened by the navigation menu button.
 * 1. Keeps other page content from covering the dropdown
