@@ -1,4 +1,5 @@
 @use '../abstracts' as abs;
+@use 'sass:color';
 
 // -----------------------------------------------------------------------------
 // This file contains basic typography styles for copy text
@@ -81,7 +82,7 @@ a {
   @include abs.on-event {
     @include abs.transition-default;
 
-    color: abs.$rust-red; /* 1 */
+    color: color.adjust(abs.$umber-brown, $lightness: -10%); /* 1 */
     cursor: pointer; /* 2 */
     text-decoration: none; /* 3 */
   }
