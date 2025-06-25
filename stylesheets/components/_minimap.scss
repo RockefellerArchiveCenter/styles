@@ -117,7 +117,7 @@ $grid-col-count: 20;
 }
 
 .minimap__record-hit {
-  @include minimap-hit(abs.$flame-orange);
+  @include minimap-hit(abs.$umber-brown);
 }
 
 /**
@@ -128,5 +128,5 @@ $grid-col-count: 20;
 }
 
 .minimap__record-hit--active {
-  @include minimap-hit-active (abs.$flame-orange);
+  @include minimap-hit-active (abs.$umber-brown);
 }

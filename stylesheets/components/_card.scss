@@ -101,7 +101,7 @@
   &:focus {
     @include abs.transition-default;
 
-    box-shadow: 0 0 0 2px abs.$crusta-orange, 0 0 8px 2px color.adjust(abs.$silver-grey, $lightness: 10%);
+    box-shadow: 0 0 0 2px abs.$umber-brown, 0 0 8px 2px color.adjust(abs.$silver-grey, $lightness: 10%);
   }
 }
 

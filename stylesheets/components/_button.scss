@@ -139,12 +139,12 @@
 }
 
 .btn--orange {
-  @include button-color(abs.$flame-orange, abs.$flame-orange, abs.$white);
+  @include button-color(abs.$umber-brown, abs.$umber-brown, abs.$white);
 
   &:hover,
   &:focus {
-    background-color: color.adjust(abs.$flame-orange, $lightness: -10%);
-    border-color: color.adjust(abs.$flame-orange, $lightness: -10%);
+    background-color: color.adjust(abs.$umber-brown, $lightness: -10%);
+    border-color: color.adjust(abs.$umber-brown, $lightness: -10%);
     color: abs.$desert-grey;
   }
 }
