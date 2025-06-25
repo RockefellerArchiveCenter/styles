@@ -173,8 +173,8 @@ fieldset {
 
 .checkbox--orange:not(:checked) + label::after,
 .checkbox--orange:checked + label::after {
-  background-color: abs.$flame-orange;
-  border: 1px solid abs.$flame-orange;
+  background-color: abs.$umber-brown;
+  border: 1px solid abs.$umber-brown;
   color: abs.$white;
 }
 
@@ -231,7 +231,7 @@ fieldset .input-group {
 }
 
 .radiobutton--orange {
-  accent-color: abs.$flame-orange;
+  accent-color: abs.$umber-brown;
 }
 
 .radiobutton--grey {

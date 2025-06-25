@@ -1,4 +1,5 @@
 @use '../abstracts' as abs;
+@use 'sass:color';
 
 // -----------------------------------------------------------------------------
 // This file contains basic typography styles for copy text
@@ -75,13 +76,13 @@ i {
  * 3. Remove link underline
  */
 a {
-  color: abs.$flame-orange;
+  color: abs.$umber-brown;
   text-decoration: underline;
 
   @include abs.on-event {
     @include abs.transition-default;
 
-    color: abs.$crusta-orange; /* 1 */
+    color: color.adjust(abs.$umber-brown, $lightness: -10%); /* 1 */
     cursor: pointer; /* 2 */
     text-decoration: none; /* 3 */
   }
@@ -222,7 +223,7 @@ h6 a {
 }
 
 .text--orange {
-  color: abs.$flame-orange;
+  color: abs.$umber-brown;
 }
 
 .text--white {

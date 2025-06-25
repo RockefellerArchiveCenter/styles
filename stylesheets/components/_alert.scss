@@ -81,5 +81,5 @@
 }
 
 .alert--orange {
-  @include alert-color(abs.$flame-orange, abs.$flame-orange, abs.$white);
+  @include alert-color(abs.$umber-brown, abs.$umber-brown, abs.$white);
 }
