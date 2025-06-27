@@ -31,11 +31,11 @@ with the base styles providing one column that takes up the full width of its co
 For example, for 4 card columns on large screens and 3 columns on medium screens, use:
 ```
 .card-list {
-  @include md-up {
+  @media screen and (min-width: 580px) {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  @include lg-up {
+  @media screen and (min-width: 1024px) {
     grid-template-columns: repeat(4, 1fr);
   }
 }
@@ -53,7 +53,8 @@ However, the card footer is optional.
 A card can be used flexibly as a content container that is not
 part of a list or a link by adding the `card--container` class and adjusting
 the HTML structure for the desired content. Optionally, `card--blue` is available
-to adjust the background color. This example includes an `h2` as the card title:
+to adjust the background color. This example includes an `h2`, paragraph, and link text
+without the card body, title, or text classes:
 
 <Story of={stories.container} />
 
