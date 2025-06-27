@@ -68,8 +68,9 @@
 
 /**
 * Use darker link color for links in striped table to ensure sufficient color contrast
+* excluding links styled as buttons
 **/
-.table.table-striped a {
+.table.table-striped a:not(.btn) {
   color: abs.$rust-red;
 }
 
