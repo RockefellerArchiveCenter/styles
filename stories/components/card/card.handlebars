@@ -14,17 +14,13 @@
   </ul>
 {{else}}
 
-  <div class="card card--container">
-    <div class="card__body">
-      <h2 class="card__title">{{titleText}}</h2>
-      <p class="card__body-text">{{bodyText}}</p>
-    </div>
+  <div class="card card--container flex--column">
+    <h2>{{titleText}}</h2>
+    <p><a href="no-target">{{bodyText}}</a></p>
   </div>
-  <div class="card card--container card--blue">
-    <div class="card__body">
-      <h2 class="card__title">{{titleText}}</h2>
-      <p class="card__body-text">{{bodyText}}</p>
-    </div>
+  <div class="card card--container card--blue flex--column">
+    <h2>{{titleText}}</h2>
+    <p><a href="no-target">{{bodyText}}</a></p>
   </div>
 
 {{/if}}
