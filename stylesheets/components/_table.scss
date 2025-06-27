@@ -67,6 +67,13 @@
 }
 
 /**
+* Use darker link color for links in striped table to ensure sufficient color contrast
+**/
+.table.table-striped a {
+  color: abs.$rust-red;
+}
+
+/**
 * Make a table scroll horizontally when it's too wide for the screen
 **/
 .table-responsive {
