@@ -165,8 +165,10 @@
   }
 }
 
-/* Ensure sufficient color contrast for links in container cards */
-.card--container a {
+/** Ensure sufficient color contrast for links in container cards
+* excluding links styled as buttons
+**/
+.card--container a:not(.btn) {
   color: abs.$rust-red;
 }
 
