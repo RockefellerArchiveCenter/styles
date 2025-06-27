@@ -165,6 +165,11 @@
   }
 }
 
+/* Ensure sufficient color contrast for links in container cards */
+.card--container a {
+  color: abs.$rust-red;
+}
+
 .card--container .card__title {
   &::after {
     position: relative; /* 2 */
