@@ -1,37 +1,39 @@
-<table class="table{{#if striped}} table-striped{{/if}}">
-    <thead>
-        <tr>
-            {{#if inputs}}<th id="select">Select</th>{{/if}}
-            <th{{#if inputs}} id="title"{{/if}}>Title</th>
-            <th{{#if inputs}} id="date"{{/if}}>Date</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            {{#if inputs}}<td><input type="checkbox" id="1" aria-labelledby="select row01"></td>{{/if}}
-            <th scope="row"{{#if inputs}} id="row01"{{/if}}>Pie Making Grant</th>
-            <td>2021</td>
-        </tr>
-        <tr>
-            {{#if inputs}}<td><input type="checkbox" id="2" aria-labelledby="select row02"></td>{{/if}}
-            <th scope="row"{{#if inputs}} id="row02"{{/if}}><a href="" target="_blank">Cupcake Makers Association of America</a></th>
-            <td>2023</td>
-        </tr>
-        <tr>
-            {{#if inputs}}<td><input type="checkbox" id="3" aria-labelledby="select row03"></td>{{/if}}
-            <th scope="row"{{#if inputs}} id="row03"{{/if}}><a href="" target="_blank">Brownie Purveyors Society</a></th>
-            <td>2024</td>
-        </tr>
-        <tr>
-            {{#if inputs}}<td><input type="checkbox" id="4" aria-labelledby="select row04"></td>{{/if}}
-            <th scope="row"{{#if inputs}} id="row04"{{/if}}>Cookie Creation Center</th>
-            <td>
-                 <ul>
-                    <li>2022</li>
-                    <li>2023</li>
-                    <li>2024</li>
-                </ul>
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div class="table-responsive">
+    <table class="table{{#if striped}} table-striped{{/if}}">
+        <thead>
+            <tr>
+                {{#if inputs}}<th id="select">Select</th>{{/if}}
+                <th{{#if inputs}} id="title"{{/if}}>Title</th>
+                <th{{#if inputs}} id="date"{{/if}}>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {{#if inputs}}<td><input type="checkbox" id="1" aria-labelledby="select row01"></td>{{/if}}
+                <th scope="row"{{#if inputs}} id="row01"{{/if}}>Pie Making Grant</th>
+                <td>2021</td>
+            </tr>
+            <tr>
+                {{#if inputs}}<td><input type="checkbox" id="2" aria-labelledby="select row02"></td>{{/if}}
+                <th scope="row"{{#if inputs}} id="row02"{{/if}}><a href="" target="_blank">Cupcake Makers Association of America</a></th>
+                <td>2023</td>
+            </tr>
+            <tr>
+                {{#if inputs}}<td><input type="checkbox" id="3" aria-labelledby="select row03"></td>{{/if}}
+                <th scope="row"{{#if inputs}} id="row03"{{/if}}><a href="" target="_blank">Brownie Purveyors Society</a></th>
+                <td>2024</td>
+            </tr>
+            <tr>
+                {{#if inputs}}<td><input type="checkbox" id="4" aria-labelledby="select row04"></td>{{/if}}
+                <th scope="row"{{#if inputs}} id="row04"{{/if}}>Cookie Creation Center</th>
+                <td>
+                    <ul>
+                        <li>2022</li>
+                        <li>2023</li>
+                        <li>2024</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
