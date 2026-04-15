@@ -17,7 +17,7 @@
 
 /**
 * Header title mixin
-*1. Assumes title is always a link and underlines on event
+* 1. Assumes title is always a link and underlines on hover
 **/
 @mixin header-title {
   @include header-text;
@@ -31,8 +31,7 @@
     font-size: 15px;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     text-decoration: underline; /* 1 */
   }
 }
@@ -50,14 +49,20 @@
 /**
 * Styles for header. Header is not fixed/sticky by default,
 * so custom styles are required to implement that.
+* 1. Vertically center all header content (brand, nav, social icons) within
+*    the header height.
 **/
-
 .header {
   min-height: 60px;
   width: 100%;
 
   .wrapper {
+    align-items: center; /* 1 */
     min-height: 60px;
+  }
+
+  .container {
+    align-items: center; /* 1 */
   }
 }
 
@@ -84,11 +89,6 @@
   a,
   button {
     color: abs.$white;
-  }
-
-  button:focus,
-  .social-icons a:focus {
-    outline-color: abs.$white;
   }
 
   svg g,
@@ -119,6 +119,7 @@
   @include header-title;
 
   margin: 0 10px 5px 0;
+  padding: 2px;
 
   @include abs.lg-up {
     margin: 0 10px 0 0;
