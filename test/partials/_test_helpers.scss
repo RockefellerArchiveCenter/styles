@@ -8,7 +8,8 @@
         @include focus-default();
       }
       @include expect {
-        outline: solid 2px $mortar-grey;
+        box-shadow: 0 0 0 2px $white;
+        outline: 2px solid $regal-blue;
         outline-offset: 2px;
       }
     }

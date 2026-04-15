@@ -35,8 +35,10 @@
 }
 
 // Default focus styles for consistency across browsers and improved accessibility.
+// to work on light or dark backgrounds.
 @mixin focus-default {
-  outline: solid 2px variables.$mortar-grey;
+  box-shadow: 0 0 0 2px variables.$white;
+  outline: 2px solid variables.$regal-blue;
   outline-offset: 2px;
 }
 
