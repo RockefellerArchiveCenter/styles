@@ -13,8 +13,8 @@
       <span class="material-icon">menu</span>
     </button>
     <ul id="nav-toggle-menu" class="dropdown__list dropdown__list--mobile list--unstyled dropdown__list--navy dropdown__list--slide-left {{#unless showMobileNavItems}}closed{{/unless}}">
-      <li><a class="btn btn--navy dropdown__btn dropdown__btn--mobile" href="https://raccess.rockarch.org" tabindex="-1">Sign in to RACcess<span class="material-icon">east</span></a></li>
-      <li><a class="btn btn--navy dropdown__btn dropdown__btn--mobile" href="/list" tabindex="-1">My List<span class="material-icon">east</span></a></li>
+      <li><a class="btn btn--navy dropdown__btn dropdown__btn--mobile" href="https://raccess.rockarch.org" {{#if showMobileNavItems}}tabindex="0"{{/if}}{{#unless showMobileNavItems}}tabindex="-1"{{/unless}}>Sign in to RACcess<span class="material-icon">east</span></a></li>
+      <li><a class="btn btn--navy dropdown__btn dropdown__btn--mobile" href="/list" {{#if showMobileNavItems}}tabindex="0"{{/if}}{{#unless showMobileNavItems}}tabindex="-1"{{/unless}}>My List<span class="material-icon">east</span></a></li>
     </ul>
   </div>
 </nav>
