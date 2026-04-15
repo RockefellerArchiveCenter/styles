@@ -52,8 +52,10 @@ $border-radius-default: 3px;
 $gutters-default: 15px;
 
 // Breakpoints map
-$break-md: 580px;
-$break-lg: 1024px;
+// Uses emm units to ensure breakpoints work with zoom based on
+// 16px base browser root font-size on <html>
+$break-md: 36.25em;  // 580px/16px
+$break-lg: 64em;     // 1024px/16px
 
 // Default transition to be used with @transition-default mixin
 $transition-default: all 0.2s ease;
