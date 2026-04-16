@@ -43,6 +43,10 @@
   height: 62px;
   padding: 20px;
   width: 100%;
+
+  &:focus {
+    @include abs.focus-inset;
+  }
 }
 
 /**
@@ -58,8 +62,7 @@
   padding: 12px 14px;
 
   &:focus {
-    box-shadow: 0 0 0 1px abs.$white inset;
-    outline: none;
+    @include abs.focus-inset;
   }
 
   .material-icon {
@@ -109,4 +112,8 @@
   height: 62px;
   padding: 20px;
   width: 180px;
+
+  &:focus {
+    @include abs.focus-inset;
+  }
 }

@@ -101,7 +101,6 @@
 /**
 * Items in a dropdown list styled as buttons. These classes can be used along with
 * specific button color classes.
-* 1. Override default focus styles to keep outline inside dropdown menu
 **/
 .dropdown__btn {
   border-radius: 0;
@@ -111,10 +110,8 @@
   margin: 0;
   padding: 10px 14px;
 
-  &:focus { /* 1 */
-    box-shadow: none;
-    outline: 2px solid abs.$white;
-    outline-offset: -4px;
+  &:focus {
+    @include abs.focus-inset;
   }
 
   .material-icon {

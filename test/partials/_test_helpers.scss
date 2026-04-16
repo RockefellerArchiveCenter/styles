@@ -16,6 +16,22 @@
   }
 }
 
+@include describe('The focus-inset mixin') {
+  @include it('Sets inset focus styles') {
+    @include assert {
+      @include output {
+        @include focus-inset();
+      }
+      @include expect {
+        outline: none;
+        box-shadow:
+          inset 0 0 0 2px $white,
+          inset 0 0 0 4px $regal-blue;
+      }
+    }
+  }
+}
+
 @include describe('The transition-default mixin') {
   @include it('Sets default transition unless users have set a preference for reduced motion') {
     @include assert {

@@ -237,6 +237,7 @@
   @include abs.transition-default;
 
   background: abs.$maroon-brown;
+  border: 1px solid abs.$maroon-brown;
   padding: 22px 0 0;
   position: static;
   width: 100%;
@@ -262,14 +263,12 @@
   }
 
   &:focus-within {
-    outline: 2px solid abs.$white;
-    outline-offset: -4px;
+    @include abs.focus-inset;
   }
 }
 
 .nav__link {
-  &:focus,
-  &:focus-within {
+  &:focus {
     outline: none;
     box-shadow: none;
   }
