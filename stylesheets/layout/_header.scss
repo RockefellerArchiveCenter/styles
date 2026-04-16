@@ -105,10 +105,10 @@
   flex-flow: column wrap;
   margin-right: auto;
   padding-left: 15px;
-  place-content: center center;
   z-index: 3;
 
   @include abs.lg-up {
+    align-items: center;
     flex-direction: row;
     justify-content: flex-start;
     padding-left: 65px;
