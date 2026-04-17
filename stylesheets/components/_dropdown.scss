@@ -48,17 +48,20 @@
 /**
 * Styles for a dropdown list of items used on small screens
 * like the dropdown opened by the navigation menu button.
-* 1. Keeps other page content from covering the dropdown
+* 1. Ensures that the dropdown scrolls on small screen/zoom to prevent
+*    content from being cut off and inaccessible.
+* 2. Keeps other page content from covering the dropdown
 **/
 .dropdown__list--mobile {
   border-radius: 0;
   height: 100%;
   margin-top: 0;
+  overflow-y: auto; /* 1 */
   position: fixed;
   right: 0;
   top: 60px;
   width: 240px;
-  z-index: 999; /* 1 */
+  z-index: 999; /* 2 */
 }
 
 /**
