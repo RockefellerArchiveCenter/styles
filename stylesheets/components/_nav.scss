@@ -103,6 +103,7 @@
 /**
 * Styles for nav that moves flex nav items to a vertical column on small screens.
 * 1. Fill 100% container width on small screens
+* 2. Maintain height of the header on small screens to prevent layout shift when dropdown opens
 **/
 .nav-column {
   display: flex;
@@ -112,6 +113,10 @@
   @include abs.lg-up {
     width: unset; /* 1 */
   }
+}
+
+.nav-column .hide-on-lg-up {
+  min-height: 60px; /* 2 */
 }
 
 /**
@@ -185,10 +190,10 @@
 /**
 * Styles for the navigation button/s that are used to open a dropdown sub-menu of
 * navigation items.
-* 1. Styles that apply only when the dropdown is open based on the aria-expanded
-*    attribute. When aria-expanded=false, these styles do not appear.
-* 2. Positions the border on top of the dropdown when it is open because they
+* 1. Positions the border on top of the dropdown when it is open because they
 *    overlap.
+* 2. Styles that apply only when the dropdown is open based on the aria-expanded
+*    attribute. When aria-expanded=false, these styles do not appear.
 **/
 .nav__btn--dropdown {
   @include nav-item-dropdown;
@@ -200,12 +205,13 @@
   @include abs.lg-up {
     display: inline-block;
     margin: 0 25px;
-    padding: 0 0 13px;
-    position: relative; /* 2 */
-    z-index: 2; /* 2 */
+    padding: 22px 0 21px;
+    position: relative; /* 1 */
+    z-index: 2; /* 1 */
 
     &[aria-expanded='true'] {
-      border-bottom: 8px solid; /* 1 */
+      border-bottom: 8px solid; /* 2 */
+      padding-bottom: 13px;
     }
   }
 
