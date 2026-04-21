@@ -104,6 +104,7 @@
 /**
 * Items in a dropdown list styled as buttons. These classes can be used along with
 * specific button color classes.
+* 1. Ensure that button elements in the dropdown are styled to fill the width of the dropdown list.
 **/
 .dropdown__btn {
   border-radius: 0;
@@ -112,6 +113,7 @@
   line-height: 21px;
   margin: 0;
   padding: 10px 14px;
+  width: 100%; /* 1 */
 
   &:focus {
     @include abs.focus-inset;
