@@ -26,7 +26,10 @@ $grid-col-count: 20;
 * Mixin for minimap hit links with a "color" variable argument, including styles
 * on hover, focus, or active events for minimap links.
 * 1. Checkmark for visited links is located in the top right corner of the the box.
-* 2. Styles for checkmark, which is visible via a color change once link is active
+* 2. Use a double-border strategy to ensure sufficient contrast. The outer dark outline 
+*    provides contrast against empty squares, while the inner white border separates it
+*    from the dark active square.
+* 3. Styles for checkmark, which is visible via a color change once link is active
 *    or has been visited.
 **/
 @mixin minimap-hit($color) {
@@ -38,7 +41,8 @@ $grid-col-count: 20;
   text-decoration: none;
 
   @include abs.on-event {
-    border: 2px solid color.adjust($color, $lightness: -22%);
+    border: 1px solid abs.$white; /* 2 */
+    box-shadow: 0 0 0 1px color.adjust($color, $lightness: -22%); /* 2 */
     color: $color;
     outline: none;
     text-decoration: none;
@@ -46,7 +50,7 @@ $grid-col-count: 20;
   }
 
   .material-icon {
-    @include abs.material-icon(12px); /* 2 */
+    @include abs.material-icon(12px); /* 3 */
 
     align-self: flex-start; /* 1 */
   }
