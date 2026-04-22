@@ -39,9 +39,3 @@ export const withDropdownItems = (args) => Header(
   }
 )
 
-export const withSocialIcons = () => Header(
-  {
-    class: "header--blue",
-    withSocialIcons: true
-  }
-)

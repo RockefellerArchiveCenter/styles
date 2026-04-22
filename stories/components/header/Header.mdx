@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/blocks';
+import { Meta, Story } from '@storybook/addon-docs';
 import * as stories from './Header.stories.js';
 
 <Meta of={stories} />
@@ -44,7 +44,7 @@ tab and toggle the "hideMobileNavItems" switch on a mobile view.
 
 <Story of={stories.withNavItems} />
 
-## Complex Navigation Links
+## Complex Navigation Links and Social Media Icons
 
 The header can also contain dropdown menus for more complex navigation. Use either `header--white` or
 `header--blue` classes to style this menu. To see what this looks like, switch to the Canvas
@@ -53,9 +53,3 @@ on a mobile view. Use javascript to implement the function to show/hide the mobi
 
 <Story of={stories.withDropdownItems} />
 
-## Social Media Icons
-
-Social media icons can also be added. These are styled to work with either the `header--white` or `header--blue`
-themes.
-
-<Story of={stories.withSocialIcons} />

@@ -10,16 +10,172 @@
       {{/if}}
 
       {{#if withNavItems}}
-        {{> navItems}}
+        <nav class="nav-right" aria-label="Main">
+          <ul class="nav__list show-on-lg-up">
+            <li class="nav__item btn--navy">
+              <a class="nav__link" href="https://raccess.rockarch.org/" id="raccess">Sign in to RACcess<span class="material-icon" aria-hidden="true">arrow_right_alt</span></a>
+            </li>
+            <li class="nav__item btn--navy">
+              <a class="nav__link" href="/list/" id="list">My List (146)<span class="material-icon" aria-hidden="true">arrow_right_alt</span></a>
+            </li>
+            <li class="nav__item btn--navy">
+              <a class="nav__link" href="/about/" id="list">About<span class="material-icon" aria-hidden="true">arrow_right_alt</span></a>
+            </li>
+          </ul>
+
+          <div class="dropdown hide-on-lg-up">
+            <button id="nav-toggle" class="btn btn--navy nav__btn--mobile closed" aria-label="menu" aria-expanded="false">
+              <span class="material-icon" aria-hidden="true">menu</span>
+            </button>
+            <ul id="nav-toggle-menu" class="dropdown__list dropdown__list--mobile list--unstyled dropdown__list--navy dropdown__list--slide-left {{#unless showMobileNavItems}}closed{{/unless}}">
+              <li><a class="btn btn--navy dropdown__btn dropdown__btn--mobile" href="https://raccess.rockarch.org">Sign in to RACcess<span class="material-icon">east</span></a></li>
+              <li><a class="btn btn--navy dropdown__btn dropdown__btn--mobile" href="/list">My List<span class="material-icon">east</span></a></li>
+              <li><a class="btn btn--navy dropdown__btn dropdown__btn--mobile" href="/about">About<span class="material-icon">east</span></a></li>
+            </ul>
+          </div>
+        </nav>
       {{/if}}
 
       {{#if withDropdownItems}}
-        {{> dropdownItems}}
-      {{/if}}
+        <nav class="nav-center" aria-label="Main">
+          <div class="nav-column">
+            <div class="hide-on-lg-up">
+              <button id="nav-toggle" class="btn nav__btn--mobile" aria-label="menu" aria-expanded="false">
+                <span class="material-icon" aria-hidden="true">menu</span>
+              </button>
+            </div>
 
-      {{#if withSocialIcons}}
+            <ul class="nav__list list--unstyled">
+              <li class="nav__item--dropdown" {{#if showMobileDropdownItems}}style="display: block;"{{/if}}>
+                <button class="nav__btn--dropdown" {{#if showDropdownItems}}aria-expanded="true"{{/if}} aria-controls="id-collections-menu">
+                  Collections
+                  <span aria-hidden="true" class="material-icon">keyboard_arrow_down</span>
+                </button>
+
+                {{#if showDropdownItems}}
+                <ul id="id-collections-menu" class="list--unstyled nav__list--dropdown">
+                  <li class="nav__list-item--dropdown">
+                    <a class="nav__link" href="/about-us/overview#collections">
+                      <p class="nav__link-title">About Our Collections</p>
+                      <p class="nav__link-description">See a list of our major collections.</p>
+                    </a>
+                  </li>
+                  <li class="nav__list-item--dropdown">
+                    <a class="nav__link" href="https://dimes.rockarch.org">
+                      <p class="nav__link-title">Search Our Collections</p>
+                      <p class="nav__link-description">Start with DIMES, our online catalog.</p>
+                    </a>
+                  </li>
+                  <li class="nav__list-item--dropdown">
+                    <a class="nav__link" href="/collections/access-and-request-materials/">
+                      <p class="nav__link-title">How to Access &amp; Request Materials</p>
+                      <p class="nav__link-description">Plan your research visit and get answers to frequently asked questions.</p>
+                    </a>
+                  </li>
+                  <li class="nav__list-item--dropdown">
+                    <a class="nav__link" href="/collections/research-stipends/">
+                      <p class="nav__link-title">Apply for a Research Stipend</p>
+                      <p class="nav__link-description">Review our guidelines and apply.</p>
+                    </a>
+                  </li>
+                  <li class="nav__list-item--dropdown">
+                    <a class="nav__link" href="/collections/information-for-records-donors/">
+                      <p class="nav__link-title">Information for Records Donors</p>
+                      <p class="nav__link-description">Find out how to donate records to us.</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              {{/if}}
+
+              <li class="nav__item--dropdown" {{#if showMobileDropdownItems}}style="display: block;"{{/if}}>
+                <button class="nav__btn--dropdown" aria-expanded="false" aria-controls="id-resources-menu">
+                  Resources
+                  <span aria-hidden="true" class="material-icon">keyboard_arrow_down</span>
+                </button>
+                <ul id="id-resources-menu" class="list--unstyled nav__list--dropdown" hidden="" style="display: none;">
+                  <li class="nav__list-item--dropdown">
+                    <a class="nav__link" href="https://resource.rockarch.org">
+                      <p class="nav__link-title">RE:source</p>
+                      <p class="nav__link-description">Visit our storytelling platform.</p>
+                    </a>
+                  </li>
+                  <li class="nav__list-item--dropdown">
+                    <a class="nav__link" href="https://rockarch.issuelab.org/">
+                      <p class="nav__link-title">Research Reports</p>
+                      <p class="nav__link-description">Reports by those who have conducted research at the RAC.</p>
+                    </a>
+                  </li>
+                  <li class="nav__list-item--dropdown">
+                    <a class="nav__link" href="https://www.zotero.org/groups/222650/rac">
+                      <p class="nav__link-title">RAC Bibliography</p>
+                      <p class="nav__link-description">Bibliography of works based on research at the RAC.</p>
+                    </a>
+                  </li>
+                  <li class="nav__list-item--dropdown">
+                    <a class="nav__link" href="https://blog.rockarch.org">
+                      <p class="nav__link-title">Bits &amp; Bytes</p>
+                      <p class="nav__link-description">The RAC blog.</p>
+                    </a>
+                  </li>
+                  <li class="nav__list-item--dropdown">
+                    <a class="nav__link" href="https://docs.rockarch.org">
+                      <p class="nav__link-title">Archival Documentation &amp; Policies</p>
+                      <p class="nav__link-description">A collection of the RAC's archival documentation.</p>
+                    </a>
+                  </li>
+                  <li class="nav__list-item--dropdown">
+                    <a class="nav__link" href="https://rockfound.rockarch.org">
+                      <p class="nav__link-title">The Rockefeller Foundation: A Digital History</p>
+                      <p class="nav__link-description">Essays, biographies, and selected digital resources.</p>
+                    </a>
+                  </li>
+                  <li class="nav__list-item--dropdown">
+                    <a class="nav__link" href="/resources/about-the-rockefellers/">
+                      <p class="nav__link-title">About the Rockefellers</p>
+                      <p class="nav__link-description">Selected biographies of Rockefeller family members.</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav__item--dropdown" {{#if showMobileDropdownItems}}style="display: block;"{{/if}}>
+                <button class="nav__btn--dropdown" aria-expanded="false" aria-controls="id-about-menu">
+                  About Us
+                  <span aria-hidden="true" class="material-icon">keyboard_arrow_down</span>
+                </button>
+                <ul id="id-about-menu" class="list--unstyled nav__list--dropdown" hidden="" style="display: none;">
+                  <li class="nav__list-item--dropdown">
+                    <a class="nav__link" href="/about-us/overview/">
+                      <p class="nav__link-title">Overview</p>
+                      <p class="nav__link-description">Background information on the RAC.</p>
+                    </a>
+                  </li>
+                  <li class="nav__list-item--dropdown">
+                    <a class="nav__link" href="/about-us/program-areas/">
+                      <p class="nav__link-title">Program Areas</p>
+                      <p class="nav__link-description">Read more about our work.</p>
+                    </a>
+                  </li>
+                  <li class="nav__list-item--dropdown">
+                    <a class="nav__link" href="/about-us/board-and-staff/">
+                      <p class="nav__link-title">Board &amp; Staff</p>
+                      <p class="nav__link-description">Contact information.</p>
+                    </a>
+                  </li>
+                  <li class="nav__list-item--dropdown">
+                    <a class="nav__link" href="/about-us/employment-opportunities/">
+                      <p class="nav__link-title">Employment Opportunities</p>
+                      <p class="nav__link-description">Job opportunities at the RAC.</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
         <div class="header__social-icons">
-          {{> ../socialIcons/socialIcons}}
+          {{> socialIcons}}
         </div>
       {{/if}}
 
