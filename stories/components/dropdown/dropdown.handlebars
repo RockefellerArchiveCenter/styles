@@ -1,42 +1,46 @@
 <div class="dropdown">
-  <button class="btn btn--orange btn--md" {{#if showDropdownItems}}aria-expanded="true"{{else}}aria-expanded="false"{{/if}} 
-  aria-haspopup="true" tabindex="0">
+  <button class="btn btn--orange btn--md" {{#if showDropdownItems}}aria-expanded="true"{{else}}aria-expanded="false"{{/if}}>
     <span class="material-icon material-icon--space-after" aria-hidden="true">{{iconBefore}}</span>
     {{buttonText}}
   </button>
   {{#if showDropdownItems}}
-  <div class="dropdown__list dropdown__list--orange dropdown__list--slide-down open" role="menu">
-    <a id="menu-item-0" class="btn btn--orange dropdown__btn dropdown__item--orange"
-      href={{linkTarget}}
-      tabindex="0" role="menuitem">
-      <span class="material-icon" aria-hidden="true">account_balance</span>
-      Schedule a Visit
-    </a>
-    <a id="menu-item-1" class="btn btn--orange dropdown__btn dropdown__item--orange" 
-      tabindex="0" role="menuitem">
-      <span class="material-icon" aria-hidden="true">local_library</span>
-      Request Items in Reading Room
-    </a>
-    <a id="menu-item-2" class="btn btn--orange dropdown__btn dropdown__item--orange" 
-      tabindex="0" role="menuitem">
-      <span class="material-icon" aria-hidden="true">content_copy</span>
+  <ul class="list--unstyled dropdown__list dropdown__list--orange dropdown__list--slide-down open">
+    <li>
+      <a class="btn btn--orange dropdown__btn dropdown__item--orange" href={{linkTarget}}>
+        <span class="material-icon" aria-hidden="true">account_balance</span>
+        Schedule a Visit
+      </a>
+    </li>
+    <li>
+      <a class="btn btn--orange dropdown__btn dropdown__item--orange" href={{linkTarget}}>
+        <span class="material-icon" aria-hidden="true">local_library</span>
+        Request Items in Reading Room
+      </a>
+    </li>
+    <li>
+      <a class="btn btn--orange dropdown__btn dropdown__item--orange" href={{linkTarget}}>
+        <span class="material-icon" aria-hidden="true">content_copy</span>
       Request Copies
       </a>
-    <a id="menu-item-3" class="btn btn--orange dropdown__btn dropdown__item--orange" 
-      tabindex="0" role="menuitem">
-      <span class="material-icon" aria-hidden="true">email</span>
-      Email List
-    </a>
-    <a id="menu-item-4" class="btn btn--orange dropdown__btn dropdown__item--orange" 
-      tabindex="0" role="menuitem">
-      <span class="material-icon" aria-hidden="true">get_app</span>
-      Download as .csv
-    </a>
-    <button id="menu-item-5" class="btn btn--orange dropdown__btn dropdown__item--orange" 
-      tabindex="0" role="menuitem">
-      <span class="material-icon" aria-hidden="true">delete</span>
-      Remove All Items
-    </button>
-  </div>
+    </li>
+    <li>
+      <a class="btn btn--orange dropdown__btn dropdown__item--orange" href={{linkTarget}}>
+        <span class="material-icon" aria-hidden="true">email</span>
+        Email List
+      </a>
+    </li>
+    <li>
+      <button id="button-control-2" class="btn btn--orange dropdown__btn dropdown__item--orange" type="button">
+        <span class="material-icon" aria-hidden="true">get_app</span>
+        Download as .csv
+      </button>
+    </li>
+    <li>
+      <button id="button-control-2" class="btn btn--orange dropdown__btn dropdown__item--orange" type="button">
+        <span class="material-icon" aria-hidden="true">delete</span>
+        Remove All Items
+      </button>
+    </li>
+  </ul>
   {{/if}}
 </div>

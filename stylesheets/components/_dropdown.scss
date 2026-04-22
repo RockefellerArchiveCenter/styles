@@ -17,6 +17,7 @@
 /**
 * Styles for a dropdown list or menu of items, typically used on small screens.
 * 1. The negative z-index value places the dropdown list under all other
+* 2. Hide the dropdown when it is closed to prevent it from being focusable and accessible to screen readers.
 * values until it is opened.
 **/
 .dropdown__list {
@@ -30,11 +31,13 @@
 
   &.open {
     opacity: 1;
+    visibility: visible; /* 2 */
     z-index: 1000; /* 1 */
   }
 
   &.closed {
     opacity: 0;
+    visibility: hidden; /* 2 */
   }
 }
 
