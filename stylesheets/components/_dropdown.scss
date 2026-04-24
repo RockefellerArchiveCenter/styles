@@ -17,6 +17,7 @@
 /**
 * Styles for a dropdown list or menu of items, typically used on small screens.
 * 1. The negative z-index value places the dropdown list under all other
+* 2. Hide the dropdown when it is closed to prevent it from being focusable and accessible to screen readers.
 * values until it is opened.
 **/
 .dropdown__list {
@@ -30,11 +31,13 @@
 
   &.open {
     opacity: 1;
+    visibility: visible; /* 2 */
     z-index: 1000; /* 1 */
   }
 
   &.closed {
     opacity: 0;
+    visibility: hidden; /* 2 */
   }
 }
 
@@ -48,17 +51,20 @@
 /**
 * Styles for a dropdown list of items used on small screens
 * like the dropdown opened by the navigation menu button.
-* 1. Keeps other page content from covering the dropdown
+* 1. Ensures that the dropdown scrolls on small screen/zoom to prevent
+*    content from being cut off and inaccessible.
+* 2. Keeps other page content from covering the dropdown
 **/
 .dropdown__list--mobile {
   border-radius: 0;
   height: 100%;
   margin-top: 0;
+  overflow-y: auto; /* 1 */
   position: fixed;
   right: 0;
   top: 60px;
   width: 240px;
-  z-index: 999; /* 1 */
+  z-index: 999; /* 2 */
 }
 
 /**
@@ -101,6 +107,7 @@
 /**
 * Items in a dropdown list styled as buttons. These classes can be used along with
 * specific button color classes.
+* 1. Ensure that button elements in the dropdown are styled to fill the width of the dropdown list.
 **/
 .dropdown__btn {
   border-radius: 0;
@@ -109,6 +116,11 @@
   line-height: 21px;
   margin: 0;
   padding: 10px 14px;
+  width: 100%; /* 1 */
+
+  &:focus {
+    @include abs.focus-inset;
+  }
 
   .material-icon {
     @include abs.material-icon(21px);
@@ -119,8 +131,4 @@
 
 .dropdown__btn--mobile {
   padding: 12px 24px;
-
-  &:focus {
-    outline-offset: 0;
-  }
 }

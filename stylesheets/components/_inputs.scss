@@ -40,6 +40,7 @@ fieldset {
     font-size: 12px;
     font-weight: abs.$font-weight-bold;
     text-transform: uppercase;
+    margin-bottom: 8px;
   }
 }
 
@@ -50,6 +51,19 @@ fieldset {
   border: 1px solid abs.$night-grey;
   border-radius: 3px;
   padding: 6px;
+
+  &:focus {
+    @include abs.focus-default;
+  }
+}
+
+/**
+* Spacing between inputs and their labels to ensure focus styles don't
+* overlap with the label
+**/
+.input label {
+  margin-bottom: 5px;
+  display: block;
 }
 
 .input__error {
@@ -77,13 +91,14 @@ fieldset {
 * Styles for checkboxes
 /**
 * 1. Keeps text left-aligned when the label stretches multiple lines
-* 2. Moves the actual checkbox off the screen.
-* 3. Expands the label so pseudo elements can be added.
-* 4. Unchecked checkboxes.
-* 5. Checked checkboxes.
-* 6. Transition between checked and unchecked checkboxes.
-* 7. Adds checkmark HTML entity.
-* 8. Ensures appearance and width of checkbox is consistent.
+* 2. Apply default focus styles
+* 3. Moves the actual checkbox off the screen.
+* 4. Expands the label so pseudo elements can be added.
+* 5. Unchecked checkboxes.
+* 6. Checked checkboxes.
+* 7. Transition between checked and unchecked checkboxes.
+* 8. Adds checkmark HTML entity.
+* 9. Ensures appearance and width of checkbox is consistent.
 **/
 
 [type='checkbox'] {
@@ -95,25 +110,27 @@ fieldset {
   display: block; /* 1 */
 }
 
-.checkbox:focus + label::before {
-  outline: 2px solid abs.$mortar-grey;
+.checkbox:focus + label::before { /* 2 */
+  box-shadow: 0 0 0 2px abs.$white;
+  outline: 2px solid abs.$regal-blue;
+  outline-offset: 2px;
 }
 
 .checkbox:not(:checked),
-.checkbox:checked { /* 2 */
+.checkbox:checked { /* 3 */
   left: -9999px;
   position: absolute;
 }
 
 .checkbox:not(:checked) + label,
-.checkbox:checked + label { /* 3 */
+.checkbox:checked + label { /* 4 */
   cursor: pointer;
   padding-left: 30px;
   position: relative;
 }
 
 .checkbox:not(:checked) + label::before,
-.checkbox:checked + label::before { /* 4 */
+.checkbox:checked + label::before { /* 5 */
   content: '';
   height: 16px;
   left: 0;
@@ -124,11 +141,11 @@ fieldset {
 }
 
 .checkbox:not(:checked) + label::after,
-.checkbox:checked + label::after { /* 5 */
+.checkbox:checked + label::after { /* 6 */
   @include abs.transition-default;
 
-  content: '\2713'; /* 7 */
-  font-family: monospace; /* 8 */
+  content: '\2713'; /* 8 */
+  font-family: monospace; /* 9 */
   font-size: 16px;
   height: 16px;
   left: 0;
@@ -139,12 +156,12 @@ fieldset {
   width: 16px;
 }
 
-[type='checkbox']:not(:checked) + label::after { /* 6 */
+[type='checkbox']:not(:checked) + label::after { /* 7 */
   opacity: 0;
   transform: scale(0);
 }
 
-[type='checkbox']:checked + label::after { /* 6 */
+[type='checkbox']:checked + label::after { /* 7 */
   opacity: 1;
   transform: scale(1);
 }
@@ -209,11 +226,11 @@ fieldset {
 }
 
 /**
-* Styles for a group of checkboxes or radio buttons
+* Spacing styles for a group of checkboxes or radio buttons to 
+* ensure focus styles don't overlap with inputs
 **/
-
 fieldset .input-group {
-  margin: 3px 0;
+  margin-bottom: 7px;
 }
 
 /**
@@ -223,7 +240,12 @@ fieldset .input-group {
 .radiobutton {
   margin-right: 3px;
   transform: scale(1.2); /* 1 */
+  vertical-align: middle;
   width: auto;
+
+  &:focus {
+    @include abs.focus-default;
+  }
 }
 
 .radiobutton--blue {

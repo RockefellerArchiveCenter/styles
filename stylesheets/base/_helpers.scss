@@ -1,4 +1,5 @@
 @use '../abstracts' as abs;
+@use 'sass:string' as str;
 
 // -----------------------------------------------------------------------------
 // This file contains CSS helper classes.
@@ -107,7 +108,7 @@
 * 1. Defines classes for space amounts 0 to 60.
 */
 
-$sides: (top, bottom, left, right);
+$sides: (top: t, bottom: b, left: l, right: r);
 
 @for $spaceamounts from 0 through 60 { /* 1 */
   @each $space in $spaceamounts {
@@ -118,28 +119,29 @@ $sides: (top, bottom, left, right);
       padding: #{$space}px !important;
     }
 
-    @each $side in $sides {
-      .m#{str-slice($side, 0, 1)}-#{$space} {
+    .mx-#{$space} {
+      margin-left: #{$space}px !important;
+      margin-right: #{$space}px !important;
+    }
+    .my-#{$space} {
+      margin-top: #{$space}px !important;
+      margin-bottom: #{$space}px !important;
+    }
+    .px-#{$space} {
+      padding-left: #{$space}px !important;
+      padding-right: #{$space}px !important;
+    }
+    .py-#{$space} {
+      padding-top: #{$space}px !important;
+      padding-bottom: #{$space}px !important;
+    }
+
+    @each $side, $letter in $sides {
+      .m#{$letter}-#{$space} {
         margin-#{$side}: #{$space}px !important;
       }
-      .p#{str-slice($side, 0, 1)}-#{$space} {
+      .p#{$letter}-#{$space} {
         padding-#{$side}: #{$space}px !important;
-      }
-      .mx-#{$space} {
-        margin-left: #{$space}px !important;
-        margin-right: #{$space}px !important;
-      }
-      .my-#{$space} {
-        margin-bottom: #{$space}px !important;
-        margin-top: #{$space}px !important;
-      }
-      .px-#{$space} {
-        padding-left: #{$space}px !important;
-        padding-right: #{$space}px !important;
-      }
-      .py-#{$space} {
-        padding-bottom: #{$space}px !important;
-        padding-top: #{$space}px !important;
       }
     }
   }

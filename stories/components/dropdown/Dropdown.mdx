@@ -10,17 +10,18 @@ selection. Use a button to open and close the dropdown menu.
 
 ## When to use
 
-This component can be used for navigation or command menus where there are typically 5 or more items. Use in mobile
-contexts when actions are collapsed into a single menu. In cases where users will select one or more
+This component can be used for navigation or disclosure menus where there are typically 5 or more items. Use in mobile
+contexts when actions are collapsed into a single dropdown menu. In cases where users will select one or more
 options from a list that do not initiate an action, use the Select component instead.
+
+Note: This component is not a menu that uses ARIA role="menu" applied, which is more commonly used with operating system
+menus and menubars.
 
 ## Best practices
 
 - Use descriptive item labels so that users understand what selecting the item will do.
-- Keep menu items to a single line of text.
+- Keep dropdown items to a single line of text.
 - Sort the list in a logical order with the most commonly selected items at the top.
-- For mobile site navigation in the header, use an unordered list element with the links as list items, and do not
-use the `menu` or `menuitem` aria roles . Refer to the header styles for more details.
 
 ## Related components
 
@@ -32,7 +33,13 @@ use the `menu` or `menuitem` aria roles . Refer to the header styles for more de
 No known issues.
 
 ## Basic implementation
-Use javascript to enable the button to open and close the dropdown menu. To see what this looks
-like, switch to the Canvas tab and toggle the "showDropdownItems" switch.
+Use javascript to:
+- Enable the button to open and close the dropdown menu
+- Toggle aria-expanded values to `true` or `false` on the button.
+- Toggle the closed/open CSS classes on the `dropdown__list` element
+- Implement handling Esc and user focus outside of the dropdown to close the dropdown
+- Implement Esc setting focus back to the button control.
+
+To open/close the dropdown, switch to the Canvas tab and toggle the "showDropdownItems" switch.
 
 <Story of={stories.basic} />
