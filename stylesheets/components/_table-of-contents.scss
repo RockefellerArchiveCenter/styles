@@ -77,7 +77,6 @@
 
 /**
 * Styles to create three table of contents color options, including styles for active links.
-* 1. Add additional padding to link items when the TOC has a title.
 **/
 .toc--neutral {
   background-color: abs.$desert-grey;
@@ -86,10 +85,11 @@
 .toc--neutral .toc__link-item,
 .toc--neutral .toc__title {
   color: abs.$night-grey;
+  border: 1px solid abs.$desert-grey;
 }
 
 .toc--neutral .active {
-  background-color: abs.$rust-red;
+  background-color: abs.$umber-brown;
   color: abs.$desert-grey;
 }
 
@@ -100,6 +100,7 @@
 .toc--blue .toc__link-item,
 .toc--blue .toc__title {
   color: abs.$regal-blue;
+  border: 1px solid abs.$solitude-blue;
 }
 
 .toc--blue .active {
@@ -113,19 +114,26 @@
 
 .toc--orange .toc__link-item,
 .toc--orange .toc__title {
-  color: abs.$white;
+  color: abs.$desert-grey;
+  border: 1px solid abs.$umber-brown;
+}
+
+.toc--orange .active {
+  background-color: abs.$desert-grey;
+  color: abs.$umber-brown;
+}
+
+/**
+* Styles for inset table of contents focus styles to work with all background colors
+* 1. Add additional padding to link items when the TOC has a title.
+**/
+.toc__title:focus,
+.toc__link-item:focus {
+  @include abs.focus-inset;
+
+  border-color: abs.$regal-blue;
 }
 
 .toc__title + div .toc__link-item {
   padding-left: 40px; /* 1 */
-}
-
-.toc--orange .toc__link-item:focus,
-.toc--orange .toc__title:focus {
-  outline: none;
-  text-decoration: underline;
-}
-
-.toc--orange .active {
-  border: abs.$white 2px solid;
 }

@@ -14,17 +14,10 @@
 
   font-size: 13px;
   font-weight: abs.$font-weight-bold;
+  line-height: 1.2;
   letter-spacing: 0.1em;
-  line-height: 60px;
+  margin-bottom: 0;
   text-transform: uppercase;
-
-  @include abs.md-up {
-    line-height: 70px;
-  }
-
-  @include abs.lg-up {
-    line-height: 60px;
-  }
 }
 
 /**
@@ -81,8 +74,10 @@
 
 /**
 * Styles for nav in header. Pushes nav items to the right.
+* 1. Vertically centers nav items within the header flex row.
 **/
 .nav-right {
+  align-items: center; /* 1 */
   display: flex;
   margin-left: auto;
 }
@@ -91,9 +86,10 @@
 * Styles for nav in header.
 * 1. Aligns items to the right on mobile.
 * 2. Aligns items in the center on large screens, with padding-left set as the width of
-* the social icons.
+*    the social icons.
 **/
 .nav-center {
+  align-items: center;
   display: flex;
   justify-content: right; /* 1 */
   width: 100%;
@@ -107,6 +103,7 @@
 /**
 * Styles for nav that moves flex nav items to a vertical column on small screens.
 * 1. Fill 100% container width on small screens
+* 2. Maintain height of the header on small screens to prevent layout shift when dropdown opens
 **/
 .nav-column {
   display: flex;
@@ -118,6 +115,10 @@
   }
 }
 
+.nav-column .hide-on-lg-up {
+  min-height: 60px; /* 2 */
+}
+
 /**
 * Styles for navigation to be used within a header.
 * 1. Prevents icon from wrapping below link on certain screen sizes.
@@ -125,39 +126,48 @@
 .nav__list {
   margin: 0;
   padding: 0;
-
-  @include abs.lg-up {
-    margin-right: -15px; /* 1 */
-  }
 }
 
 /**
 * Styles for navigation items and links used within a header.
-* 1. Replace the default focus styles, which don't look good with the header
-*    items, with an underline.
 **/
 .nav__item {
   border-left: 1px solid abs.$mortar-grey;
-  display: inline-block;
+  display: inline-flex;
 
   @include abs.md-up {
-    padding: 0 14px;
-  }
-
-  &:focus-within,
-  &:hover {
-    @include abs.transition-default;
-
-    text-decoration: underline; /* 1 */
+    padding: 0 8px;
   }
 }
 
-.nav__link {
+/**
+* Header nav links (text + icon). inline-flex collapses the link into a single
+* bounding box so the browser draws one unified focus outline rather than
+* separate outlines around the text run and the inline-block icon.
+**/
+.nav__item .nav__link {
   @include header-nav-link;
 
+  align-items: center;
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+
   &:focus {
-    outline: inherit; /* 1 */
+    @include abs.focus-default;
   }
+}
+
+/**
+* Dropdown nav links (title + description paragraphs). Block-level flex column
+* so title and description each have the full dropdown width, preventing
+* wrapping within side-by-side layout.
+**/
+.nav__list-item--dropdown .nav__link {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  text-decoration: none;
 }
 
 /**
@@ -180,10 +190,10 @@
 /**
 * Styles for the navigation button/s that are used to open a dropdown sub-menu of
 * navigation items.
-* 1. Styles that apply only when the dropdown is open based on the aria-expanded
-*    attribute. When aria-expanded=false, these styles do not appear.
-* 2. Positions the border on top of the dropdown when it is open because they
+* 1. Positions the border on top of the dropdown when it is open because they
 *    overlap.
+* 2. Styles that apply only when the dropdown is open based on the aria-expanded
+*    attribute. When aria-expanded=false, these styles do not appear.
 **/
 .nav__btn--dropdown {
   @include nav-item-dropdown;
@@ -194,19 +204,15 @@
 
   @include abs.lg-up {
     display: inline-block;
-    margin: 20px 25px 0;
-    padding: 0 0 13px;
-    position: relative; /* 2 */
-    z-index: 2; /* 2 */
+    margin: 0 25px;
+    padding: 22px 0 21px;
+    position: relative; /* 1 */
+    z-index: 2; /* 1 */
 
     &[aria-expanded='true'] {
-      border-bottom: 8px solid; /* 1 */
-      outline: none; /* 1 */
+      border-bottom: 8px solid; /* 2 */
+      padding-bottom: 13px;
     }
-  }
-
-  &[aria-expanded='true'] {
-    outline: none; /* 1 */
   }
 
   &:hover {
@@ -234,6 +240,7 @@
   @include abs.transition-default;
 
   background: abs.$maroon-brown;
+  border: 1px solid abs.$maroon-brown;
   padding: 22px 0 0;
   position: static;
   width: 100%;
@@ -247,7 +254,6 @@
 
 /**
 * Styles for the dropdown of navigation list items.
-* 1. Removes link underline and replaces with an outline on focus.
 **/
 .nav__list-item--dropdown {
   height: auto;
@@ -255,14 +261,19 @@
   padding: 12px 28px;
   text-align: left;
 
-  &:hover,
-  &:focus-within {
+  &:hover {
     background: abs.$rust-red;
-    text-decoration: none; /* 1 */
   }
 
   &:focus-within {
-    outline: 1px solid abs.$white; /* 1 */
+    @include abs.focus-inset;
+  }
+}
+
+.nav__link {
+  &:focus {
+    outline: none;
+    box-shadow: none;
   }
 }
 
@@ -284,7 +295,6 @@
 * Styles for the menu button that opens a navigation dropdown on small screens.
 * 1. Pushes menu button to the right side of the nav flexbox.
 * 2. Aligns right icon margin with navigation buttons.
-* 3. Removes default outline offset on focus so that the outline stays within the header.
 **/
 .nav__btn--mobile {
   background: unset;
@@ -292,18 +302,7 @@
   margin-left: auto; /* 1 */
   margin-right: 10px; /* 2 */
 
-  &:focus {
-    outline-offset: 0; /* 3 */
-  }
-
   .material-icon {
     @include abs.material-icon(40px);
   }
-}
-
-/**
-* Vertical align button in the center of the header
-**/
-.nav__btn {
-  margin-top: 8px;
 }

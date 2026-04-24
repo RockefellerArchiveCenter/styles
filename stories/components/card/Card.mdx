@@ -31,17 +31,20 @@ with the base styles providing one column that takes up the full width of its co
 For example, for 4 card columns on large screens and 3 columns on medium screens, use:
 ```
 .card-list {
-  @media screen and (min-width: 580px) {
+  @media screen and (min-width: 36.25em) {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 64em) {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 ```
 
 By default, cards are designed to be a list of links with a body and a footer.
+In a list, the links should be marked up as headings with the class `card__title`
+applied. In this example, they are designated as an `<h2>` element, but the
+level should be adjusted based on page structure.
 
 <Story of={stories.basic} />
 

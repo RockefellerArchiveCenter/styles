@@ -1,10 +1,13 @@
 <nav class="nav-right" aria-label="Main">
   <ul class="nav__list show-on-lg-up">
     <li class="nav__item btn--navy">
-      <a class="nav__link" href="https://raccess.rockarch.org/" id="raccess">Sign in to RACcess <span class="material-icon" aria-hidden="true">arrow_right_alt</span></a>
+      <a class="nav__link" href="https://raccess.rockarch.org/" id="raccess">Sign in to RACcess<span class="material-icon" aria-hidden="true">arrow_right_alt</span></a>
     </li>
     <li class="nav__item btn--navy">
-      <a class="nav__link" href="/list/" id="list">My List (146) <span class="material-icon" aria-hidden="true">arrow_right_alt</span></a>
+      <a class="nav__link" href="/list/" id="list">My List (146)<span class="material-icon" aria-hidden="true">arrow_right_alt</span></a>
+    </li>
+    <li class="nav__item btn--navy">
+      <a class="nav__link" href="/about/" id="list">About<span class="material-icon" aria-hidden="true">arrow_right_alt</span></a>
     </li>
   </ul>
 
@@ -13,8 +16,9 @@
       <span class="material-icon">menu</span>
     </button>
     <ul id="nav-toggle-menu" class="dropdown__list dropdown__list--mobile list--unstyled dropdown__list--navy dropdown__list--slide-left {{#unless showMobileNavItems}}closed{{/unless}}">
-      <li><a class="btn btn--navy dropdown__btn dropdown__btn--mobile" href="https://raccess.rockarch.org" tabindex="-1">Sign in to RACcess<span class="material-icon">east</span></a></li>
-      <li><a class="btn btn--navy dropdown__btn dropdown__btn--mobile" href="/list" tabindex="-1">My List<span class="material-icon">east</span></a></li>
+      <li><a class="btn btn--navy dropdown__btn dropdown__btn--mobile" href="https://raccess.rockarch.org" {{#if showMobileNavItems}}tabindex="0"{{/if}}{{#unless showMobileNavItems}}tabindex="-1"{{/unless}}>Sign in to RACcess<span class="material-icon">east</span></a></li>
+      <li><a class="btn btn--navy dropdown__btn dropdown__btn--mobile" href="/list" {{#if showMobileNavItems}}tabindex="0"{{/if}}{{#unless showMobileNavItems}}tabindex="-1"{{/unless}}>My List<span class="material-icon">east</span></a></li>
+      <li><a class="btn btn--navy dropdown__btn dropdown__btn--mobile" href="/about" {{#if showMobileNavItems}}tabindex="0"{{/if}}{{#unless showMobileNavItems}}tabindex="-1"{{/unless}}>About<span class="material-icon">east</span></a></li>
     </ul>
   </div>
 </nav>

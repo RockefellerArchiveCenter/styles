@@ -40,7 +40,9 @@ by applying the `header--blue` class:
 The header can contain navigation items. These can be simple links. Use the `header--blue`
 class in this case. On small screens, the navigation items are replaced by a button and
 with a dropdown that shows the links. To see what this looks like, switch to the Canvas
-tab and toggle the "hideMobileNavItems" switch on a mobile view:
+tab and toggle the "hideMobileNavItems" switch on a mobile view. Note that the mobile dropdown
+link should not receive keyboard focus until the dropdown is open. Use Javascript to toggle
+`tabindex="-1"` and `tabindex="0"` on the link elements to handle keyboard focus.
 
 <Story of={stories.withNavItems} />
 
