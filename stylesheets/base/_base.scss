@@ -39,7 +39,7 @@ body {
  * not sufficient based on background color or other factors, they can be overridden at the
  * component level.
  */
-button:focus,
-a:focus {
+button:focus-visible,
+a:focus-visible {
   @include abs.focus-default;
 }
