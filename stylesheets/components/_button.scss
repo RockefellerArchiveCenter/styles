@@ -144,6 +144,7 @@
   &:hover,
   &:focus {
     background-color: color.adjust(abs.$umber-brown, $lightness: -10%);
+    border-color: color.adjust(abs.$umber-brown, $lightness: -10%);
     color: abs.$desert-grey;
   }
 }
