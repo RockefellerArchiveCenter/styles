@@ -1,29 +1,33 @@
-<ul class="pagination__list">
-  <li class="pagination__button disabled">
-    <a class="material-icon" aria-disabled="true" aria-label="Previous page" rel="prev">keyboard_arrow_left</a>
-  </li>
-  <li class="pagination__page page__active">
-    <a rel="canonical" aria-label="Page 1 is your current page" aria-current="page">1</a>
-  </li>
-  <li class="pagination__page">
-    <a>2</a>
-  </li>
-  <li class="pagination__page">
-    <a>3</a>
-  </li>
-  <li class="pagination__page">
-    <a>4</a>
-  </li>
-  <li class="pagination__page">
-    <a>5</a>
-  </li>
-  <li class="pagination__break disabled">
-    <a aria-disabled="true" aria-label="truncated pages">...</a>
-  </li>
-  <li class="pagination__page">
-    <a>7</a>
-  </li>
-  <li class="pagination__button">
-    <a class="material-icon" aria-disabled="false" aria-label="Next page">keyboard_arrow_right</a>
-  </li>
-</ul>
+<nav aria-label="breadcrumbs">
+  <ol class="pagination__list">
+    <li class="pagination__button disabled">
+      <a aria-disabled="true" aria-label="Previous page" rel="prev">
+        <span aria-hidden="true" class="material-icon">keyboard_arrow_left</span>
+      </a>
+    </li>
+    <li class="pagination__page page__active">
+      <a aria-label="Page 1 is your current page" aria-current="page">1</a>
+    </li>
+    <li class="pagination__page">
+      <a>2</a>
+    </li>
+    <li class="pagination__page">
+      <a>3</a>
+    </li>
+    <li class="pagination__page">
+      <a>4</a>
+    </li>
+    <li class="pagination__page">
+      <a>5</a>
+    </li>
+    <li class="pagination__break" aria-label="truncated pages">...</li>
+    <li class="pagination__page">
+      <a>7</a>
+    </li>
+    <li class="pagination__button">
+      <a aria-disabled="true" aria-label="Next page" rel="next">
+        <span aria-hidden="true" class="material-icon">keyboard_arrow_right</span>
+      </a>
+    </li>
+  </ol>
+</nav>
