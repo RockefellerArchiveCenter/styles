@@ -112,6 +112,7 @@
   &:hover,
   &:focus {
     background-color: color.adjust(abs.$yale-blue, $lightness: -10%);
+    border-color: color.adjust(abs.$yale-blue, $lightness: -10%);
     color: abs.$white;
   }
 }
@@ -132,6 +133,7 @@
   &:hover,
   &:focus {
     background-color: color.adjust(abs.$regal-blue, $lightness: 10%);
+    border-color: color.adjust(abs.$regal-blue, $lightness: 10%);
     color: abs.$white;
   }
 }
@@ -172,6 +174,7 @@
   &:hover,
   &:focus {
     background-color: color.adjust(abs.$dark-grey, $lightness: -5%);
+    border-color: color.adjust(abs.$dark-grey, $lightness: -5%);
     color: abs.$black;
   }
 }
