@@ -269,7 +269,7 @@
     background: abs.$rust-red;
   }
 
-  &:focus-visible {
+  &:focus-within {
     @include abs.focus-inset;
   }
 }
