@@ -57,7 +57,7 @@
 **/
 .dropdown__list--mobile {
   border-radius: 0;
-  height: 100%;
+  height: calc(100vh - 60px); /* 1 */
   margin-top: 0;
   overflow-y: auto; /* 1 */
   position: fixed;
