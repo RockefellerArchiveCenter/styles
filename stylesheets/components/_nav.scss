@@ -261,9 +261,14 @@
 **/
 .nav__list-item--dropdown {
   height: auto;
-  min-width: 300px;
-  padding: 12px 28px;
+  min-width: auto;
+  padding: 12px 15px;
   text-align: left;
+
+  @include abs.lg-up {
+    min-width: 300px;
+    padding: 12px 28px;
+  }
 
   &:hover {
     background: abs.$rust-red;
