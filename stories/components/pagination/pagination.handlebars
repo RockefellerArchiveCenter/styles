@@ -1,4 +1,4 @@
-<nav aria-label="breadcrumbs">
+<nav aria-label="pagination">
   <ol class="pagination__list">
     <li class="pagination__button disabled">
       <a aria-disabled="true" aria-label="Previous page" rel="prev">
@@ -20,7 +20,10 @@
     <li class="pagination__page">
       <a>5</a>
     </li>
-    <li class="pagination__break" aria-label="truncated pages">...</li>
+    <li class="pagination__break">
+      <span aria-hidden="true">...</span>
+      <span class="visually-hidden">More pages available</span>
+    </li>
     <li class="pagination__page">
       <a>7</a>
     </li>
