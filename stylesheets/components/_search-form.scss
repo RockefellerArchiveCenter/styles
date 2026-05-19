@@ -88,7 +88,7 @@
   width: 100%; /* 3 */
 
   @include abs.md-up {
-    padding-top: 0px;
+    padding-top: 0;
     width: auto;
   }
 }
@@ -137,7 +137,9 @@
 /**
 * Restore default order of search input, select, and button for desktop.
 **/
-.input__search, .search__submit-btn, .select__search--wrapper {
+.input__search,
+.search__submit-btn,
+.select__search--wrapper {
   @include abs.md-up {
     order: 0;
   }
@@ -151,8 +153,9 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   margin-top: 10px;
+}
 
-  .select__search--wrapper {
-    padding-top: 0px;
-  }
+.input-group__search-controls,
+.select__search--wrapper {
+  padding-top: 0;
 }
