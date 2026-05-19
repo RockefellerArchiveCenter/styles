@@ -12,35 +12,37 @@
   flex-wrap: wrap;
 }
 
+/**
+* Defines layout styles for the search input, select, and button container.
+**/
 .input-group__search {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
 }
 
-.input-group__search-controls {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  margin-top: 20px;
-}
-
+/**
+* Defines styles for the search input container.
+* 1. Prevents button from wrapping to a new line when the search input is resized.
+**/
 .input__search {
+  flex: 1 1 0px; /* 1 */
   width: 100%;
 }
 
 /**
 * Defines styles for search input box and associated text.
-* 1. Removes rounded corners on iOS
-* 2. Changes font-size from the standard input-text mixin
+* 1. Removes default iOS appearance (rounded corners).
+* 2. Sets fixed height for the input.
 **/
 .input__search input {
   @include abs.input-text;
 
   appearance: none; /* 1 */
   border: 1px solid abs.$night-grey;
-  border-radius: 0; /* 1 */
-  font-size: 18px; /* 2 */
-  height: 62px;
+  border-radius: 0;
+  font-size: 18px;
+  height: 62px; /* 2 */
   padding: 20px;
   width: 100%;
 
@@ -52,13 +54,15 @@
 /**
 * Defines styles for button associated with the search-form component.
 * 1. Align button with search input box instead of label.
+* 2. Merges the border with the input field.
+* 3. Places button after input in visual order.
 **/
-
 .search__submit-btn {
   align-self: flex-end; /* 1 */
   border-color: abs.$rust-red;
   border-radius: 0;
-  margin-left: -1px;
+  margin-left: -1px; /* 2 */
+  order: 2; /* 3 */
   padding: 12px 14px;
 
   &:focus {
@@ -71,35 +75,37 @@
 }
 
 /**
-* Defines styles for select.
+* Defines styles for select wrapper.
 * 1. Align select with search input box instead of label
-* 2. Do not display on small screens
+* 2. Forces visual order to appear last (below input and button).
+* 3. Forces 100% width on mobile to force a line break.
 **/
 .select__search--wrapper {
   align-self: flex-end; /* 1 */
-  display: none; /* 2 */
-  position: relative;
+  display: flex;
+  order: 3; /* 2 */
+  padding-top: 10px;
+  width: 100%; /* 3 */
 
   @include abs.md-up {
-    display: inline-block; /* 2 */
-  }
-
-  /**
-  * Specify size and placement of icon to replace default select expand arrow
-  **/
-  .material-icon {
-    @include abs.material-icon(20px);
-
-    position: absolute;
-    right: 22px;
-    top: 20px;
+    padding-top: 0px;
+    width: auto;
   }
 }
 
 /**
-* Defines styles for select and associated text. Note that with the native select element,
-* there is no ability to style the select options.
-* 1. Remove the default select expand arrow, which is replaced with an icon in the html.
+* Defines styles for select and associated text.
+* 1. Establishes positioning context for the absolute icon.
+**/
+.select__search {
+  position: relative; /* 1 */
+  width: 180px;
+}
+
+/**
+* Defines styles for the select element itself.
+* 1. Hides the default expand arrow.
+* 2. Sets fixed height to match input.
 **/
 .select__search select {
   @include abs.input-text;
@@ -109,11 +115,44 @@
   border: 1px solid abs.$night-grey;
   border-radius: 0;
   font-size: 16px;
-  height: 62px;
+  height: 62px; /* 2 */
   padding: 20px;
-  width: 180px;
 
   &:focus {
     @include abs.focus-inset;
+  }
+}
+
+/**
+* Specify size and placement of icon to replace default select expand arrow.
+**/
+.select__search .material-icon {
+  @include abs.material-icon(20px);
+
+  position: absolute;
+  right: 10px;
+  top: 20px;
+}
+
+/**
+* Restore default order of search input, select, and button for desktop.
+**/
+.input__search, .search__submit-btn, .select__search--wrapper {
+  @include abs.md-up {
+    order: 0;
+  }
+}
+
+/**
+* Styles for controls styled as a block element (not inline).
+**/
+.input-group__search-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 10px;
+
+  .select__search--wrapper {
+    padding-top: 0px;
   }
 }
