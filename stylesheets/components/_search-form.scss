@@ -137,6 +137,7 @@
   height: auto; /* 2 */
   min-height: 63px; /* 2 */
   padding: 20px;
+  width: 100%;
 
   &:focus {
     @include abs.focus-inset;
