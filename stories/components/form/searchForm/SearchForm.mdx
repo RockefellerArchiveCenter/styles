@@ -32,6 +32,9 @@ No known issues.
 
 ## Basic implementation
 
+In the default implementation, the label for the search input is hidden using the
+`visually-hidden` class. The label is still available to screen readers.
+
 <Story of={stories.basic} />
 
 ## With additional controls
@@ -45,14 +48,3 @@ Or included as an inline element:
 
 <Story of={stories.withInlineControls} />
 
-## With hidden elements
-
-It is possible to hide the label for the search input by adding the `visually-hidden` class.
-The label will still be available to screen readers:
-
-<Story of={stories.noLabel} />
-
-In cases where a search is automatically executed on keydown or other event, the
-search input button can be hidden as well:
-
-<Story of={stories.noButton} />
