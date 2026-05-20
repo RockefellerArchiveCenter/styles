@@ -51,7 +51,11 @@
 * Optional alert icon.
 **/
 .alert__icon {
-  @include abs.material-icon(75px, normal);
+  @include abs.material-icon(32px, normal);
+
+  @include abs.md-up {
+    @include abs.material-icon(75px, normal);
+  }
 
   align-self: start;
   padding-right: 10px;
