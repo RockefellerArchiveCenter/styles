@@ -85,14 +85,14 @@
 
 /**
 * Defines styles for select wrapper.
-* 1. Align select with search input box instead of label
+* 1. Aligns items when text is resized and forces select to stretch to full height of input and button.
 * 2. Sets min height but allows height to grow with text resizing.
-* 2. Forces visual order to appear last (below input and button).
-* 3. Forces 100% width on mobile to force a line break.
-* 4. Removes extra margin when select is inline with input and button.
+* 3. Forces visual order to appear last (below input and button).
+* 4. Forces 100% width on mobile to force a line break.
+* 5. Removes extra margin when select is inline with input and button.
 **/
 .select__search--wrapper {
-  align-self: flex-end; /* 1 */
+  align-self: stretch; /* 1 */
   display: flex;
   height: auto; /* 2 */
   min-height: 63px; /* 2 */
