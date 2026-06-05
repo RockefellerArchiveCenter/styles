@@ -75,7 +75,8 @@
 
 /**
 * Base card styles
-* 1. Relative positioning is necessary in order to make entire card clickable.
+* 1. Prevents content from overflowing the card
+* 2. Relative positioning is necessary in order to make entire card clickable.
 **/
 .card {
   @include card-element-flex;
@@ -84,8 +85,10 @@
   background-color: abs.$desert-grey;
   border-radius: abs.$border-radius-default;
   box-shadow: 0 0 0 1px abs.$silver-grey, 0 0 4px 0 color.adjust(abs.$silver-grey, $lightness: 5%);
+  max-width: 100%; /* 1 */
+  overflow-wrap: break-word; /* 1 */
   padding: 26px 20px;
-  position: relative; /* 1 */
+  position: relative; /* 2 */
 
   @include abs.md-up {
     min-height: 210px;
