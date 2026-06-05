@@ -6,6 +6,10 @@ on:
     branches:
       - base
   workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to deploy, e.g. 2.0.10'
+        required: true
 
 jobs:
   build:
@@ -47,7 +51,14 @@ jobs:
         run: yarn compile
 
       - name: Build the release
-        run: script/build_release.sh "v$(node -p "require('./package.json').version")"
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            VERSION="${{ inputs.version }}"
+          else
+            VERSION="$(echo "${{ github.event.pull_request.title }}" | sed -E 's/^.*release ([0-9]+\.[0-9]+\.[0-9]+).*$/\1/')"
+          fi
+
+          script/build_release.sh "v${VERSION}"
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v6.1.3
