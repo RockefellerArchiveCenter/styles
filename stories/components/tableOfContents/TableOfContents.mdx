@@ -15,7 +15,7 @@ without having to scroll.
 
 ## Best practices
 
-- Use the `#toc-link-group` div id selector for building the table of contents from
+- Use the `#toc-link-group` id selector for building the table of contents from
 page headings in a script.
 
 - Optionally use `class="active"` to indicate when a specific section of contents is
@@ -42,9 +42,10 @@ The table of contents comes in a variety of colors. Use the `toc--neutral`,
 
 <Story of={stories.orange} />
 
-## Adding a title
+## Adding nested sections with link titles
 
-The table of contents can also have one or more titles to separate sections:
+The table of contents can also have one or more sections with title links. In this case,
+use nested lists to semantically convey the relationships between links.
 
 <Story of={stories.withTitle} />
 
