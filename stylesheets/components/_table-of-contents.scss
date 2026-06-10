@@ -22,6 +22,11 @@
   width: 100%;
 }
 
+.toc__list {
+  margin: 0;
+  padding: 0;
+}
+
 /**
 * Styles for the table of contents skip link
 **/
@@ -134,6 +139,7 @@
   border-color: abs.$regal-blue;
 }
 
-.toc__title + div .toc__link-item {
+.toc__title + div .toc__link-item,
+.toc__title + ul .toc__link-item {
   padding-left: 40px; /* 1 */
 }

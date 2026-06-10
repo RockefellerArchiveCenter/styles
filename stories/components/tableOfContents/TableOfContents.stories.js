@@ -16,6 +16,6 @@ export const blue = (args) => TableOfContents({ class: 'toc--blue', ...args })
 
 export const orange = (args) => TableOfContents({ class: 'toc--orange', ...args })
 
-export const withTitle = (args) => TableOfContents({ class: 'toc--neutral', title: 'Digital Preservation Policy', ...args })
+export const withSection = (args) => TableOfContents({ class: 'toc--neutral', title: 'Digital Preservation Policy', ...args })
 
 export const skipNavigation = (args) => TableOfContents({ class: 'toc--blue', skipNavigation: true, ...args })
