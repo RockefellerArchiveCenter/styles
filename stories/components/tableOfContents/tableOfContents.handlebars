@@ -3,17 +3,37 @@
   {{#if skipNavigation}}
     <a href="#documentation" class="toc__skip-link toc__skip-link--orange">Skip navigation</a>
   {{/if}}
-  <a class="toc__title" href="/digital-preservation-policy/">{{title}}</a>
-  <div id="toc-link-group">
+  <ul class="toc {{class}} list--unstyled toc__list" id="toc-link-group">
+    <li>
+      <a class="toc__title" href="/digital-preservation-policy/">{{title}}</a>
+      <ul class="list--unstyled toc__list">
+        {{#each listItems}}
+        <li>
+          <a class="toc__link-item {{#if this.active}}active{{/if}}" href="#{{this.text}}">{{this.text}}</a>
+        </li>
+        {{/each}}
+      </ul>
+      <a class="toc__title" href="/digital-preservation-policy/">{{title}}</a>
+      <ul class="list--unstyled toc__list">
+        {{#each listItems}}
+        <li>
+          <a class="toc__link-item {{#if this.active}}active{{/if}}" href="#{{this.text}}">{{this.text}}</a>
+        </li>
+        {{/each}}
+      </ul>
+    </li>
+  </ul>
+</nav>
+  
 {{else}}
 <nav class="toc--sticky" aria-label="{{ariaLabel}}">
   {{#if skipNavigation}}
     <a href="#documentation" class="toc__skip-link toc__skip-link--orange">Skip navigation</a>
   {{/if}}
   <div class="toc {{class}}" id="toc-link-group">
-{{/if}}
     {{#each listItems}}
-    <a class="toc__link-item {{#if this.active}}active{{/if}}" href="#{{this.text}}">{{this.text}}</a>
+      <a class="toc__link-item {{#if this.active}}active{{/if}}" href="#{{this.text}}">{{this.text}}</a>
     {{/each}}
   </div>
 </nav>
+{{/if}}
