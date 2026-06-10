@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.0.11](https://github.com/RockefellerArchiveCenter/styles/compare/v2.0.10...v2.0.11) (2026-06-10)
+
+
+### Bug Fixes
+
+* convey nested toc items semantically ([7c571b4](https://github.com/RockefellerArchiveCenter/styles/commit/7c571b46e03be381136e92f8ed976e609c7ad38b))
+* convey nested toc items semantically ([18a3259](https://github.com/RockefellerArchiveCenter/styles/commit/18a32597790237557e01c4f48da4a50b630140ed))
+* convey nested toc items semantically ([96d6f4f](https://github.com/RockefellerArchiveCenter/styles/commit/96d6f4fa5ee772f58ee71340ded983684f9261a8))
+* update toc story name ([6854010](https://github.com/RockefellerArchiveCenter/styles/commit/68540109b2c35b0647f904599e0b32265d6c22be))
+
 ## [2.0.10](https://github.com/RockefellerArchiveCenter/styles/compare/v2.0.9...v2.0.10) (2026-06-05)
 
 
