@@ -1,17 +1,28 @@
 name: Deploy Style Guide
 
 on:
-  workflow_dispatch:
-  push:
+  pull_request:
+    types: [closed]
     branches:
       - base
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to deploy, e.g. 2.0.10'
+        required: true
 
 jobs:
   build:
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      (
+        github.event.pull_request.merged == true &&
+        startsWith(github.event.pull_request.head.ref, 'release-please--')
+      )
     runs-on: ubuntu-latest
 
     environment:
-      name: ${{ github.ref_name }}
+      name: base
 
     steps:
       - name: Checkout repository
