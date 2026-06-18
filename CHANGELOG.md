@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.12](https://github.com/RockefellerArchiveCenter/styles/compare/v2.0.11...v2.0.12) (2026-06-18)
+
+
+### Bug Fixes
+
+* update deploys ([d4c8276](https://github.com/RockefellerArchiveCenter/styles/commit/d4c82765122a0b40fb7c6f60b1922446645acc14))
+* update enforcer ([61d8b04](https://github.com/RockefellerArchiveCenter/styles/commit/61d8b04ad9748c629c7c7e9325801b473169b54d))
+* update workflows ([053fa87](https://github.com/RockefellerArchiveCenter/styles/commit/053fa87d8d4c0c3e00ee836f6b4f9b868976a7fd))
+* update workflows ([053fa87](https://github.com/RockefellerArchiveCenter/styles/commit/053fa87d8d4c0c3e00ee836f6b4f9b868976a7fd))
+* update workflows ([d4c8276](https://github.com/RockefellerArchiveCenter/styles/commit/d4c82765122a0b40fb7c6f60b1922446645acc14))
+
 ## [2.0.11](https://github.com/RockefellerArchiveCenter/styles/compare/v2.0.10...v2.0.11) (2026-06-10)
 
 
