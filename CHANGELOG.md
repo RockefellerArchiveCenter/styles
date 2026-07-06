@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.13](https://github.com/RockefellerArchiveCenter/styles/compare/v2.0.12...v2.0.13) (2026-07-06)
+
+
+### Bug Fixes
+
+* **deps:** Scheduled dependency updates ([c1d7180](https://github.com/RockefellerArchiveCenter/styles/commit/c1d7180b8039e67b63d74569e4434f3cd0d8df59))
+* **deps:** Scheduled dependency updates ([e4066e4](https://github.com/RockefellerArchiveCenter/styles/commit/e4066e4b53ff9dc2a2a4ea507503da7113291c61))
+
 ## [2.0.12](https://github.com/RockefellerArchiveCenter/styles/compare/v2.0.11...v2.0.12) (2026-06-18)
 
 
