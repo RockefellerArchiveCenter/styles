@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.14](https://github.com/RockefellerArchiveCenter/styles/compare/v2.0.13...v2.0.14) (2026-08-03)
+
+
+### Bug Fixes
+
+* **deps:** Dependency Updates ([26e3702](https://github.com/RockefellerArchiveCenter/styles/commit/26e3702779d06f0127fbd62e35be33d068e6a1a2))
+* **deps:** Dependency Updates ([fa95246](https://github.com/RockefellerArchiveCenter/styles/commit/fa9524609980909320ef936a6536a73d648db197))
+* **deps:** Dependency Updates ([fa95246](https://github.com/RockefellerArchiveCenter/styles/commit/fa9524609980909320ef936a6536a73d648db197))
+* **deps:** Dependency Updates from Development ([26e3702](https://github.com/RockefellerArchiveCenter/styles/commit/26e3702779d06f0127fbd62e35be33d068e6a1a2))
+* **deps:** Scheduled dependency updates ([5b00b6c](https://github.com/RockefellerArchiveCenter/styles/commit/5b00b6ca9f60515a43435faf770ccdf55a872df3))
+
 ## [2.0.13](https://github.com/RockefellerArchiveCenter/styles/compare/v2.0.12...v2.0.13) (2026-07-06)
 
 
