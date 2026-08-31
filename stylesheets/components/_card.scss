@@ -132,19 +132,23 @@
 }
 
 /**
-* Styles for card titles.
-* 1. Creates a pseudo element which makes the entire card clickable.
-* 2. Ensures that the card title will always be on a line by itself.
+* Styles for card titles. For card titles that are links and card titles that contain links.
+* 1. Ensures that the card title will always be on a line by itself.
 **/
-.card__title {
+.card__title,
+.card__title a {
   @include card-title-text;
 
-  width: 100%; /* 2 */
-  &::after { /* 1 */
-    content: '';
-    inset: 0;
-    position: absolute;
-  }
+  width: 100%; /* 1 */
+}
+
+/* Makes the entire card clickable when card title is a link OR card title is a header containing a link,
+excluding cards that are containers */
+.card:not(.card--container) .card__title a::after,
+.card:not(.card--container) .card__title:not(:has(a))::after {
+  content: '';
+  inset: 0;
+  position: absolute;
 }
 
 .card__body-text {
@@ -155,11 +159,9 @@
   @include card-text;
 }
 
-/* Styles for card that is not a link.
+/* Styles for card that is not a link (the entire card is not clickable)
 * 1. Remove hover and focus styles for cards.
-* 2. Enables flexible interaction with elements in a card by removing the pseudo element
-*  so that the entire card is not clickable.
-* 3. Add an option for a blue background
+* 2. Add an option for a blue background
 */
 .card--container {
   &:hover,
@@ -175,12 +177,6 @@
   color: abs.$rust-red;
 }
 
-.card--container .card__title {
-  &::after {
-    position: relative; /* 2 */
-  }
-}
-
 .card--blue {
-  background-color: abs.$solitude-blue; /* 3 */
+  background-color: abs.$solitude-blue; /* 2 */
 }

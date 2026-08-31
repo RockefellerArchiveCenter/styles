@@ -1,8 +1,14 @@
 {{#if link}}
   <ul class="card-list">
     <li class="card">
+      <a class="card__title" href="{{linkTarget}}">{{titleText}}</a>
+    </li>
+  </ul>
+{{else if titleLinkWithBodyAndFooter}}
+  <ul class="card-list">
+    <li class="card">
       <div class="card__body">
-        <h2 class="card__title"><a class="card__title" href="{{linkTarget}}">{{titleText}}</a></h2>
+        <h2 class="card__title"><a href="{{linkTarget}}">{{titleText}}</a></h2>
         <p class="card__body-text">{{bodyText}}</p>
       </div>
       {{#if footerText}}
@@ -13,7 +19,6 @@
     </li>
   </ul>
 {{else}}
-
   <div class="card card--container flex--column">
     <h2>{{titleText}}</h2>
     <p><a href="no-target">{{bodyText}}</a></p>
@@ -22,7 +27,6 @@
     <h2>{{titleText}}</h2>
     <p><a href="no-target">{{bodyText}}</a></p>
   </div>
-
 {{/if}}
 
 
