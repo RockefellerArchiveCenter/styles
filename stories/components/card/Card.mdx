@@ -25,7 +25,7 @@ No related components.
 
 No known issues.
 
-## Default implementation
+## Basic implementation
 The number of card columns can be specified in local CSS using media queries,
 with the base styles providing one column that takes up the full width of its container.
 For example, for 4 card columns on large screens and 3 columns on medium screens, use:
@@ -41,16 +41,20 @@ For example, for 4 card columns on large screens and 3 columns on medium screens
 }
 ```
 
-By default, cards are designed to be a list of links with a body and a footer.
-In a list, the links should be marked up as headings with the class `card__title`
-applied. In this example, they are designated as an `<h2>` element, but the
-level should be adjusted based on page structure.
+By default, cards are designed to be a list of links. Apply `card__title` to the link element to ensure the
+full card is clickable.
 
-<Story of={stories.basic} />
+<Story of={stories.link} />
 
-However, the card footer is optional.
+## Cards with headings and content sections
 
-<Story of={stories.noFooter} />
+There are optional card sections, including a card body and footer to assist with layout. 
+When there is extensive content in each card in the list, the titles should be marked up as headings 
+with `card__title` applied. The nested link inside the heading does not have a CSS class. 
+In this example, the titles are designated as an `<h2>` element, but the **heading level should be adjusted 
+based on page structure**.
+
+<Story of={stories.titleLinkWithBodyAndFooter} />
 
 ## Using cards as stylized content containers
 A card can be used flexibly as a content container that is not
