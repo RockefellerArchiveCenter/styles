@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.15](https://github.com/RockefellerArchiveCenter/styles/compare/v2.0.14...v2.0.15) (2026-08-31)
+
+
+### Bug Fixes
+
+* correctly implement styles for card list links and improve stories + docs ([fa7e192](https://github.com/RockefellerArchiveCenter/styles/commit/fa7e192ec5db42a2684bab08bb40c0a5370b989a))
+
 ## [2.0.14](https://github.com/RockefellerArchiveCenter/styles/compare/v2.0.13...v2.0.14) (2026-08-03)
 
 
