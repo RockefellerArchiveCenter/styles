@@ -11,8 +11,8 @@ export default {
   }
 };
 
-export const basic = (args) => Card({ ...args, link: true })
+export const link = (args) => Card({ ...args, link: true })
 
-export const noFooter = (args) => Card({ ...args, link: true, footerText: null })
+export const titleLinkWithBodyAndFooter = (args) => Card({ ...args, titleLinkWithBodyAndFooter: true })
 
 export const container = (args) => Card(args)
