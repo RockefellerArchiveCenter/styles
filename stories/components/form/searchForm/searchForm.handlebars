@@ -1,14 +1,14 @@
 <form role="search" action="/search/" method="get">
   <div class="search">
     <div class="input-group__search">
-      <div class="input__search">
-        <label for="query" class="visually-hidden">Enter a search term</label>
+      <div class="input__search input">
+        <label for="query" class="{{#if hideLabel}}visually-hidden{{/if}}">Enter a search term</label>
         <input type="search" id="query" name="query" placeholder="Search..." maxlength="255" size="60" required>
       </div>
       {{#if controlsInline}}
       <div class="select__search--wrapper">
         <div class="select__search">
-          <label for="field" class="visually-hidden">Choose a search category</label>
+          <label for="field" class="{{#if hideLabel}}visually-hidden{{/if}}">Choose a search category</label>
           <select name="field" id="field">
             <option value="">Everything</option>
             <option value="title">Title</option>
@@ -25,7 +25,7 @@
     <div class="input-group__search-controls">
       <div class="select__search--wrapper">
         <div class="select__search">
-          <label for="field" class="visually-hidden">Choose a search category</label>
+          <label for="field" class="{{#if hideLabel}}visually-hidden{{/if}}">Choose a search category</label>
           <select name="field" id="field">
             <option value="">Everything</option>
             <option value="title">Title</option>

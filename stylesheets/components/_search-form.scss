@@ -24,12 +24,14 @@
 /**
 * Defines styles for the search input container.
 * 1. Aligns items when text is resized.
-* 2. Prevents button from wrapping to a new line when the search input is resized.
+* 2. Places visible label above input.
+* 3. Prevents button from wrapping to a new line when the search input is resized.
 **/
 .input__search {
   align-items: stretch; /* 1 */
   display: flex; /* 1 */
-  flex: 1 1 0px; /* 2 */
+  flex-direction: column; /* 2 */
+  flex: 1 1 0px; /* 3 */
   width: 100%;
 }
 
