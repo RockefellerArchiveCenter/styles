@@ -46,8 +46,10 @@
 /**
 * Defines styles for search input box and associated text.
 * 1. Removes default iOS appearance (rounded corners).
-* 2. Sets min height but allows height to grow with text resizing.
-* 3. Places input first in visual order.
+* 2. Fills the container height so the input and button edges stay aligned when
+*    their natural heights differ.
+* 3. Sets min height but allows height to grow with text resizing.
+* 4. Places input first in visual order.
 **/
 .input__search input {
   @include abs.input-text;
@@ -55,10 +57,11 @@
   appearance: none; /* 1 */
   border: 1px solid abs.$night-grey;
   border-radius: 0;
+  flex: 1 0 auto; /* 2 */
   font-size: 18px;
-  height: auto; /* 2 */
-  min-height: 63px; /* 2 */
-  order: 1; /* 3 */
+  height: auto; /* 3 */
+  min-height: 63px; /* 3 */
+  order: 1; /* 4 */
   padding: 20px;
   width: 100%;
 
