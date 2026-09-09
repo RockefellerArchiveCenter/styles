@@ -43,6 +43,12 @@ not clear from its context, or where a page contains more than one search elemen
 
 <Story of={stories.withVisibleLabel} />
 
+When the search includes additional controls, each control needs its own visible
+label. Labels sit above the element they describe so that the input and any
+controls stay aligned.
+
+<Story of={stories.withVisibleLabelAndInlineControls} />
+
 ## With additional controls
 
 It is possible to add additional controls to the search component. These can

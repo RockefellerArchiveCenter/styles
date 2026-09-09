@@ -19,6 +19,13 @@ export const withVisibleLabel = () => Search({
   button: true
 })
 
+export const withVisibleLabelAndInlineControls = () => Search({
+  hideLabel: false,
+  controlsBlock: false,
+  controlsInline: true,
+  button: true
+})
+
 export const withBlockControls = () => Search({
   hideLabel: true,
   controlsBlock: true,

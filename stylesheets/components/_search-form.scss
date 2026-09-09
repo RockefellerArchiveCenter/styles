@@ -36,6 +36,14 @@
 }
 
 /**
+* Defines spacing between a visible label and the search input so the input's
+* focus style does not overlap the label.
+**/
+.input__search label {
+  margin-bottom: 5px;
+}
+
+/**
 * Defines styles for search input box and associated text.
 * 1. Removes default iOS appearance (rounded corners).
 * 2. Sets min height but allows height to grow with text resizing.
@@ -113,14 +121,24 @@
 /**
 * Defines styles for select and associated text.
 * 1. Aligns items when text is resized.
-* 2. Establishes positioning context for the absolute icon.
-* 3. Sets minimum width using ems to prevent select from collapsing when options are long with text resize.
+* 2. Places visible label above select.
+* 3. Establishes positioning context for the absolute icon.
+* 4. Sets minimum width using ems to prevent select from collapsing when options are long with text resize.
 **/
 .select__search {
   align-items: stretch; /* 1 */
   display: flex; /* 1 */
-  position: relative; /* 2 */
-  min-width: 11em; /* 3 */
+  flex-direction: column; /* 2 */
+  position: relative; /* 3 */
+  min-width: 11em; /* 4 */
+}
+
+/**
+* Defines spacing between a visible label and the select so the select's focus
+* style does not overlap the label.
+**/
+.select__search label {
+  margin-bottom: 5px;
 }
 
 /**
@@ -148,13 +166,16 @@
 
 /**
 * Specify size and placement of icon to replace default select expand arrow.
+* 1. Anchored to the bottom so the icon tracks the select rather than the
+*    container when a visible label sits above it. 23px places the icon 20px
+*    below the top of a default-height (63px) select.
 **/
 .select__search .material-icon {
   @include abs.material-icon(20px);
 
   position: absolute;
   right: 10px;
-  top: 20px;
+  bottom: 23px; /* 1 */
 }
 
 /**
