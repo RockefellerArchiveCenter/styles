@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.1.0](https://github.com/RockefellerArchiveCenter/styles/compare/v2.0.15...v2.1.0) (2026-09-09)
+
+
+### Features
+
+* add new story for inline ctrls+visible labels ([245dddb](https://github.com/RockefellerArchiveCenter/styles/commit/245dddb99b8c6a95e0b0e3efd8e689168512d39c))
+* add search form with visible label to stories ([99555a4](https://github.com/RockefellerArchiveCenter/styles/commit/99555a4f383d6b6b3d1a9b9b62c4f977c29b2a45))
+* support error msg focus when required ([dcd728a](https://github.com/RockefellerArchiveCenter/styles/commit/dcd728a14b8176f626bdb8f2a62e4bf405df1a97))
+
+
+### Bug Fixes
+
+* don't cutoff modal headers that wrap ([31e9437](https://github.com/RockefellerArchiveCenter/styles/commit/31e9437bb1a741738e2590f7443aa1ec94cd453f))
+
 ## [2.0.15](https://github.com/RockefellerArchiveCenter/styles/compare/v2.0.14...v2.0.15) (2026-08-31)
 
 
