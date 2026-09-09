@@ -78,6 +78,10 @@ fieldset {
   margin: 10px 0;
   padding: 10px;
   width: 100%;
+
+  &:focus {
+    @include abs.focus-default;
+  }
 }
 
 .input__help-text {
