@@ -37,6 +37,18 @@ In the default implementation, the label for the search input is hidden using th
 
 <Story of={stories.basic} />
 
+## With visible label
+The label can also be shown. Use a visible label when the purpose of the search is
+not clear from its context, or where a page contains more than one search element.
+
+<Story of={stories.withVisibleLabel} />
+
+When the search includes additional controls, each control needs its own visible
+label. Labels sit above the element they describe so that the input and any
+controls stay aligned.
+
+<Story of={stories.withVisibleLabelAndInlineControls} />
+
 ## With additional controls
 
 It is possible to add additional controls to the search component. These can

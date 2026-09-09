@@ -44,14 +44,15 @@ $modal-header-height: 52px;
 
 /**
 * Styles for the modal header.
-* 1. Setting a fixed height allows for calculation of the modal body height below.
+* 1. A minimum height allows for calculation of the modal body height below,
+*    while letting the header grow when the title wraps.
 **/
 .modal__header {
   background-color: abs.$night-grey;
   box-sizing: border-box;
   color: abs.$white;
   display: flex;
-  height: $modal-header-height; /* 1 */
+  min-height: $modal-header-height; /* 1 */
   justify-content: space-between;
   padding: 16px 20px 10px;
   width: 100%;

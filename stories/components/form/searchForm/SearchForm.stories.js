@@ -6,21 +6,35 @@ export default {
 };
 
 export const basic = () => Search({
+  hideLabel: true,
+  controlsBlock: false,
+  controlsInline: false,
+  button: true
+})
+
+export const withVisibleLabel = () => Search({
   hideLabel: false,
   controlsBlock: false,
   controlsInline: false,
   button: true
 })
 
-export const withBlockControls = () => Search({
+export const withVisibleLabelAndInlineControls = () => Search({
   hideLabel: false,
+  controlsBlock: false,
+  controlsInline: true,
+  button: true
+})
+
+export const withBlockControls = () => Search({
+  hideLabel: true,
   controlsBlock: true,
   controlsInline: false,
   button: true
 })
 
 export const withInlineControls = () => Search({
-  hideLabel: false,
+  hideLabel: true,
   controlsBlock: false,
   controlsInline: true,
   button: true
