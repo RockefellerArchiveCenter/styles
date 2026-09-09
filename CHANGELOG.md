@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.1.1](https://github.com/RockefellerArchiveCenter/styles/compare/v2.1.0...v2.1.1) (2026-09-09)
+
+
+### Bug Fixes
+
+* Fully support text resize in search form ([d58bd1e](https://github.com/RockefellerArchiveCenter/styles/commit/d58bd1e890bcf07412cfd6882638e88c98b067d6))
+* keep the input and button edges aligned ([907a392](https://github.com/RockefellerArchiveCenter/styles/commit/907a392b69b81324734b8d6af053095a295e8292))
+
 ## [2.1.0](https://github.com/RockefellerArchiveCenter/styles/compare/v2.0.15...v2.1.0) (2026-09-09)
 
 
