@@ -43,7 +43,7 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --ignore-scripts
 
       - name: Build storybook
         run: yarn build-storybook
