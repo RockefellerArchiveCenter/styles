@@ -13,13 +13,18 @@
   padding-left: 0;
 
   a {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    margin: 0;
+    min-height: 24px;
+    min-width: 24px;
     text-decoration: none;
   }
 
   .material-icon {
     @include abs.material-icon(23px, 23px);
 
-    margin-bottom: 3px;
     pointer-events: unset;
   }
 }
@@ -29,19 +34,20 @@
  */
 .pagination__page,
 .pagination__break {
-  display: inline-block;
-  padding: 0 5px;
-
-  @include abs.lg-up {
-    padding: 0 7px;
-  }
+  align-items: center;
+  display: inline-flex;
+  padding: 0 2px;
+  vertical-align: middle;
 }
 
 /**
  * Class that defines the layout of pagination arrow buttons.
  */
 .pagination__button {
-  display: inline-block;
+  align-items: center;
+  display: inline-flex;
+  padding: 0 2px;
+  vertical-align: middle;
 }
 
 /**
