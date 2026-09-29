@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.1.2](https://github.com/RockefellerArchiveCenter/styles/compare/v2.1.1...v2.1.2) (2026-09-29)
+
+
+### Bug Fixes
+
+* ensure sufficient target size and spacing in pagination links ([a3d6bdc](https://github.com/RockefellerArchiveCenter/styles/commit/a3d6bdc9d2b9b19f32075a3f68838e987fa0fdbc))
+* simplify pagination styles ([80742cf](https://github.com/RockefellerArchiveCenter/styles/commit/80742cf2843610039af7e43c578ad9f6f002477c))
+
 ## [2.1.1](https://github.com/RockefellerArchiveCenter/styles/compare/v2.1.0...v2.1.1) (2026-09-09)
 
 
