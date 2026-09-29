@@ -5,17 +5,29 @@
 // -----------------------------------------------------------------------------
 
 /**
- * Class for pagination to specify typography and list style for paginated lists.
+ * Typography, list reset, and layout for the paginated list and its items.
+ * Every link is at least 24px square, and items are centred on each other
+ * (rather than baseline-aligned) so page numbers and arrow icons line up.
  */
 .pagination__list {
   font-family: abs.$sans-serif-stack;
+  font-size: 17px;
+  line-height: normal;
   list-style: none;
   padding-left: 0;
+
+  li {
+    align-items: center;
+    display: inline-flex;
+    padding: 0 2px;
+    vertical-align: middle;
+  }
 
   a {
     align-items: center;
     display: inline-flex;
     justify-content: center;
+    line-height: normal;
     margin: 0;
     min-height: 24px;
     min-width: 24px;
@@ -30,38 +42,6 @@
 }
 
 /**
- * Styles the layout of page numbers and the break ellipses in the paginated list.
- */
-.pagination__page,
-.pagination__break {
-  align-items: center;
-  display: inline-flex;
-  padding: 0 2px;
-  vertical-align: middle;
-}
-
-/**
- * Class that defines the layout of pagination arrow buttons.
- */
-.pagination__button {
-  align-items: center;
-  display: inline-flex;
-  padding: 0 2px;
-  vertical-align: middle;
-}
-
-/**
- * Styles the typography and layout for text in anchor elements for page numbers and the break ellipses.
- */
-.pagination__page a,
-.pagination__break {
-  font-family: inherit;
-  font-size: 17px;
-  line-height: normal;
-  margin: 0;
-}
-
-/**
  * Styles the color and cursor actions for the active page list item.
  */
 .page__active a {
@@ -71,6 +51,7 @@
 
 /**
  * Styles to underline page and break ellipses on focus and hover.
+ * The break can be a link in some implementations.
  */
 .pagination__page a:hover,
 .pagination__page a:focus,
