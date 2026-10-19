@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.1.4](https://github.com/RockefellerArchiveCenter/styles/compare/v2.1.3...v2.1.4) (2026-10-19)
+
+
+### Bug Fixes
+
+* get rid of extra closing p tag in footer ([930b5b7](https://github.com/RockefellerArchiveCenter/styles/commit/930b5b7792ece7365950d8e7626357574d9d425f))
+* get rid of extra p tag ([eb18511](https://github.com/RockefellerArchiveCenter/styles/commit/eb18511aa677839b24d60e959925a74133f4a9e9))
+* update reading room hours in footer ([6c362aa](https://github.com/RockefellerArchiveCenter/styles/commit/6c362aa67ac9c64beea5d0fd2886c4872b8d077b))
+* Update reading room hours in footer ([da8153c](https://github.com/RockefellerArchiveCenter/styles/commit/da8153ca47831858fb7b238c0e7b98238b6c75aa))
+
 ## [2.1.3](https://github.com/RockefellerArchiveCenter/styles/compare/v2.1.2...v2.1.3) (2026-10-05)
 
 
