@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.1.5](https://github.com/RockefellerArchiveCenter/styles/compare/v2.1.4...v2.1.5) (2026-10-21)
+
+
+### Bug Fixes
+
+* update node ([b33bfda](https://github.com/RockefellerArchiveCenter/styles/commit/b33bfda9d8e843ebcbd3745e57425a9be25f147e))
+* update node ([b33bfda](https://github.com/RockefellerArchiveCenter/styles/commit/b33bfda9d8e843ebcbd3745e57425a9be25f147e))
+* update node ([599ab44](https://github.com/RockefellerArchiveCenter/styles/commit/599ab44588d7ab3be0f6f83cda109a8b889835b3))
+* update node ([599ab44](https://github.com/RockefellerArchiveCenter/styles/commit/599ab44588d7ab3be0f6f83cda109a8b889835b3))
+* update node ([09a459a](https://github.com/RockefellerArchiveCenter/styles/commit/09a459a54f9af756d2051aa8bdc7f927a1af37b6))
+
 ## [2.1.4](https://github.com/RockefellerArchiveCenter/styles/compare/v2.1.3...v2.1.4) (2026-10-19)
 
 
