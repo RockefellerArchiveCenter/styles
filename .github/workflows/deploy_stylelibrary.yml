@@ -30,10 +30,10 @@ jobs:
         with:
           ref: base
 
-      - name: Use Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v7.0.0
         with:
-          node-version: 'lts/*'
+          node-version: ">=24.22.1 <25"
 
       - name: Cache dependencies
         uses: actions/cache@v6.1.0
