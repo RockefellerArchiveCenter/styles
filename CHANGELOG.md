@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.1.6](https://github.com/RockefellerArchiveCenter/styles/compare/v2.1.5...v2.1.6) (2026-11-02)
+
+
+### Bug Fixes
+
+* **deps:** Dependency Updates ([1b08eb6](https://github.com/RockefellerArchiveCenter/styles/commit/1b08eb65bf4efc6ea3b57188c431e89bfd2947c1))
+* **deps:** Scheduled dependency updates ([13d6c4c](https://github.com/RockefellerArchiveCenter/styles/commit/13d6c4ce0524763fc5ec2d32c24f839c376dda04))
+
 ## [2.1.5](https://github.com/RockefellerArchiveCenter/styles/compare/v2.1.4...v2.1.5) (2026-10-21)
 
 
