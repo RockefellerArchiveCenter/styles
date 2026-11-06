@@ -1,0 +1,17 @@
+{
+  "backgrounds": [
+    "white", "desertGrey", "solitudeBlue", "roseViolet", "wanWhiteGrey", "peachOrange",
+    "waterBlue", "silverGrey", "sandyOrange", "darkGrey", "crustaOrange", "flameOrange"
+  ],
+  "pairs": {
+    "black": ["white", "desertGrey", "solitudeBlue", "roseViolet", "wanWhiteGrey", "peachOrange", "waterBlue", "silverGrey", "sandyOrange", "darkGrey", "crustaOrange", "flameOrange"],
+    "regalBlue": ["white", "desertGrey", "solitudeBlue", "roseViolet", "wanWhiteGrey", "peachOrange", "waterBlue", "silverGrey", "sandyOrange", "darkGrey"],
+    "nightGrey": ["white", "desertGrey", "solitudeBlue", "roseViolet", "wanWhiteGrey", "peachOrange", "waterBlue", "silverGrey", "sandyOrange", "darkGrey"],
+    "midnightBlue": ["white", "desertGrey", "solitudeBlue", "roseViolet", "wanWhiteGrey", "peachOrange", "waterBlue", "silverGrey", "sandyOrange", "darkGrey"],
+    "maroonBrown": ["white", "desertGrey", "solitudeBlue", "roseViolet", "wanWhiteGrey", "peachOrange", "waterBlue", "silverGrey", "sandyOrange", "darkGrey"],
+    "yaleBlue": ["white", "desertGrey", "solitudeBlue", "roseViolet", "wanWhiteGrey", "peachOrange", "waterBlue"],
+    "rustRed": ["white", "desertGrey", "solitudeBlue", "roseViolet", "wanWhiteGrey", "peachOrange"],
+    "mortarGrey": ["white", "desertGrey", "solitudeBlue", "roseViolet", "wanWhiteGrey", "peachOrange"],
+    "umberBrown": ["white", "desertGrey", "solitudeBlue", "roseViolet"]
+  }
+}
