@@ -1,0 +1,36 @@
+<style>
+  .contrast-grid { font-size: 16px; }
+  .contrast-grid thead th { writing-mode: vertical-rl; transform: rotate(200deg); }
+  .contrast-grid tbody th { text-align: right; white-space: nowrap; padding-right: 5px; }
+  .contrast-grid .hex { font-size: 14px; font-weight: 400; }
+  .contrast-grid td { width: 64px; height: 64px; text-align: center; font-size: 24px; font-weight: 700; }
+</style>
+<div class="sb-unstyled" style="overflow-x: auto;">
+  <table class="contrast-grid">
+    <thead>
+      <tr>
+        <td></td>
+        {{#each backgrounds}}
+          <th scope="col">{{name}}<br><span class="hex">{{hex}}</span></th>
+        {{/each}}
+      </tr>
+    </thead>
+    <tbody>
+      {{#each rows}}
+        <tr>
+          <th scope="row">{{name}}<br><span class="hex">{{hex}}</span></th>
+          {{#each cells}}
+            {{#if passes}}
+              <td style="color: {{text}}; background: {{background}};">
+                <span aria-hidden="true">Aa</span>
+                <span class="visually-hidden">Passes</span>
+              </td>
+            {{else}}
+              <td><span class="visually-hidden">Fails</span></td>
+            {{/if}}
+          {{/each}}
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
