@@ -1,8 +1,9 @@
-import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
+import { Meta, Story, ColorPalette, ColorItem } from '@storybook/blocks';
 
-import {colors} from './Colors'
+import { swatches } from './Colors'
+import * as stories from './Colors.stories.js'
 
-<Meta title="Global/Colors" />
+<Meta of={stories} />
 
 # Colors
 
@@ -11,7 +12,7 @@ of the Rockefeller Archive Center logo, but that color is not widely used in com
 sufficient color contrast ratios for accessibility.
 
 <ColorPalette>
-  <ColorItem title="Primary color palette" colors={[colors.umberBrown, colors.regalBlue]} />
+  <ColorItem title="Primary color palette" colors={swatches('umberBrown', 'regalBlue')} />
 </ColorPalette>
 
 ## Best practices
@@ -22,37 +23,37 @@ large text (defined as 14pt bold or 18pt).
 ## Oranges
 
 <ColorPalette>
-  <ColorItem title="flame-orange" colors={[colors.flameOrange]} />
-  <ColorItem title="crusta-orange" colors={[colors.crustaOrange]} />
-  <ColorItem title="sandy-orange" colors={[colors.sandyOrange]} />
-  <ColorItem title="peach-orange" colors={[colors.peachOrange]} />
-  <ColorItem title="rose-violet" colors={[colors.roseViolet]} />
+  <ColorItem title="flame-orange" colors={swatches('flameOrange')} />
+  <ColorItem title="crusta-orange" colors={swatches('crustaOrange')} />
+  <ColorItem title="sandy-orange" colors={swatches('sandyOrange')} />
+  <ColorItem title="peach-orange" colors={swatches('peachOrange')} />
+  <ColorItem title="rose-violet" colors={swatches('roseViolet')} />
 </ColorPalette>
 
 ## Blues
 
 <ColorPalette>
-  <ColorItem title="regal-blue" colors={[colors.regalBlue]} />
-  <ColorItem title="midnight-blue" colors={[colors.midnightBlue]} />
-  <ColorItem title="yale-blue" colors={[colors.yaleBlue]} />
-  <ColorItem title="water-blue" colors={[colors.waterBlue]} />
-  <ColorItem title="solitude-blue" colors={[colors.solitudeBlue]} />
+  <ColorItem title="regal-blue" colors={swatches('regalBlue')} />
+  <ColorItem title="midnight-blue" colors={swatches('midnightBlue')} />
+  <ColorItem title="yale-blue" colors={swatches('yaleBlue')} />
+  <ColorItem title="water-blue" colors={swatches('waterBlue')} />
+  <ColorItem title="solitude-blue" colors={swatches('solitudeBlue')} />
 </ColorPalette>
 
 ## Browns
 
 <ColorPalette>
-  <ColorItem title="maroon-brown" colors={[colors.maroonBrown]} />
-  <ColorItem title="rust-red" colors={[colors.rustRed]} />
-  <ColorItem title="umber-brown" colors={[colors.umberBrown]} />
+  <ColorItem title="maroon-brown" colors={swatches('maroonBrown')} />
+  <ColorItem title="rust-red" colors={swatches('rustRed')} />
+  <ColorItem title="umber-brown" colors={swatches('umberBrown')} />
 </ColorPalette>
 
 ## Grays
 
 <ColorPalette>
-  <ColorItem title="silver-grey" colors={[colors.silverGrey]} />
-  <ColorItem title="wan-white-grey" colors={[colors.wanWhiteGrey]} />
-  <ColorItem title="desert-grey" colors={[colors.desertGrey]} />
+  <ColorItem title="silver-grey" colors={swatches('silverGrey')} />
+  <ColorItem title="wan-white-grey" colors={swatches('wanWhiteGrey')} />
+  <ColorItem title="desert-grey" colors={swatches('desertGrey')} />
 </ColorPalette>
 
 ## Monochrome shades
@@ -62,12 +63,19 @@ Colors from dark to light are:
 <ColorPalette>
   <ColorItem
     title="Monochrome"
-    colors={[
-      colors.black,
-      colors.nightGrey,
-      colors.mortarGrey,
-      colors.darkGrey,
-      colors.white
-    ]}
+    colors={swatches('black', 'nightGrey', 'mortarGrey', 'darkGrey', 'white')}
   />
 </ColorPalette>
+
+## Accessible color pairs
+To see which text colors meet WCAG 2.x Level AA contrast requirements (4.5:1), 
+find the background color along the top, and foreground colors down the side. Empty 
+cells fail, so don't pair those colors.
+
+### Dark text on light backgrounds
+
+<Story of={stories.darkTextOnLight} />
+
+### Light text on dark backgrounds
+
+<Story of={stories.lightTextOnDark} />
