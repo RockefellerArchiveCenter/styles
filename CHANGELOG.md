@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.2.0](https://github.com/RockefellerArchiveCenter/styles/compare/v2.1.6...v2.2.0) (2026-11-10)
+
+
+### Features
+
+* add color contrast grid and hex codes to color stories ([09c1107](https://github.com/RockefellerArchiveCenter/styles/commit/09c11075c27c2bf2b3d13f47c7e9e9527f367f01))
+* add grid with dark backgrounds ([047d9a9](https://github.com/RockefellerArchiveCenter/styles/commit/047d9a98a9d0f04598f829f3d935f126f170ec8f))
+
+
+### Bug Fixes
+
+* adjust rotation to avoid element overlap ([b4a18ae](https://github.com/RockefellerArchiveCenter/styles/commit/b4a18ae7043d681107eaeadf4af0f3b9bd8ec570))
+* **deps:** update storybook packages ([e61e6e7](https://github.com/RockefellerArchiveCenter/styles/commit/e61e6e75fba16d8686b61ad2220ae302a915c08c))
+* give space to table headings ([06b7e8a](https://github.com/RockefellerArchiveCenter/styles/commit/06b7e8a79e6e230aa2667d185fe4108b3cda026f))
+* hide icons from screen readers in header nav ([e70249e](https://github.com/RockefellerArchiveCenter/styles/commit/e70249e6d10e384fed1724f7a64e1414bddde449))
+* hide icons from screen readers in header nav story ([80f9644](https://github.com/RockefellerArchiveCenter/styles/commit/80f9644887786a90dbdb66b534bd53df18d61b71))
+
 ## [2.1.6](https://github.com/RockefellerArchiveCenter/styles/compare/v2.1.5...v2.1.6) (2026-11-02)
 
 
